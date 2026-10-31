@@ -1,0 +1,13 @@
+﻿data_mode,run_id,model,scenario,status,scale_out_seconds,scale_out_lower_seconds,scale_out_upper_seconds,baseline_instances,peak_instances,recovery_seconds
+LOCAL_TEST,local-faas-burst-mixed-7,faas,burst,INSUFFICIENT_DATA,,,,,,
+LOCAL_TEST,local-faas-idle-mixed-8,faas,idle,NOT_APPLICABLE_SCENARIO,,,,,,
+LOCAL_TEST,local-faas-steady-mixed-6,faas,steady,NOT_APPLICABLE_SCENARIO,,,,,,
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,burst,NOT_APPLICABLE_FIXED_VM,,,,,,
+LOCAL_TEST,local-iaas-idle-mixed-2,iaas,idle,NOT_APPLICABLE_FIXED_VM,,,,,,
+LOCAL_TEST,local-iaas-steady-cpu-11,iaas,steady,NOT_APPLICABLE_FIXED_VM,,,,,,
+LOCAL_TEST,local-iaas-steady-mixed-0,iaas,steady,NOT_APPLICABLE_FIXED_VM,,,,,,
+LOCAL_TEST,local-iaas-steady-read-9,iaas,steady,NOT_APPLICABLE_FIXED_VM,,,,,,
+LOCAL_TEST,local-iaas-steady-write-10,iaas,steady,NOT_APPLICABLE_FIXED_VM,,,,,,
+LOCAL_TEST,local-paas-burst-mixed-4,paas,burst,INSUFFICIENT_DATA,,,,,,
+LOCAL_TEST,local-paas-idle-mixed-5,paas,idle,NOT_APPLICABLE_SCENARIO,,,,,,
+LOCAL_TEST,local-paas-steady-mixed-3,paas,steady,NOT_APPLICABLE_SCENARIO,,,,,,

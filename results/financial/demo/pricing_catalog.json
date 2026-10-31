@@ -1,0 +1,181 @@
+{
+  "provider": "Google Cloud Platform",
+  "region": "asia-southeast1",
+  "currency": "USD",
+  "retrieved_date": "2026-10-31",
+  "effective_date": null,
+  "status": "PUBLIC_ON_DEMAND_SNAPSHOT_REVERIFY_BEFORE_REAL_FINANCIAL_USE",
+  "assumptions": [
+    "Public list prices, Linux, no CUD, no Spot, no tax, USD.",
+    "Effective SKU dates and account-specific discounts require Billing Catalog/export.",
+    "Descriptive SKU names below refer to official public tables, not numeric SKU IDs.",
+    "Evidence in reports/sources/*_singapore_tables.json and compressed source pages.",
+    "Tier 2 request billing and regional instance billing are taken independently from Singapore tables."
+  ],
+  "rates": {
+    "vm_hour": {
+      "service": "Compute Engine",
+      "sku": "E2 standard 2 vCPU 8 GiB on-demand Linux",
+      "sku_id": null,
+      "unit": "VM-hour",
+      "unit_price": 0.08266614,
+      "source": "https://cloud.google.com/products/compute/pricing/general-purpose"
+    },
+    "run_cpu_request": {
+      "service": "Cloud Run",
+      "sku": "Active CPU request-based Singapore",
+      "sku_id": null,
+      "unit": "vCPU-second",
+      "unit_price": 3.36e-05,
+      "source": "https://cloud.google.com/run/pricing"
+    },
+    "run_memory_request": {
+      "service": "Cloud Run",
+      "sku": "Active memory request-based Singapore",
+      "sku_id": null,
+      "unit": "GiB-second",
+      "unit_price": 3.5e-06,
+      "source": "https://cloud.google.com/run/pricing"
+    },
+    "run_cpu_idle": {
+      "service": "Cloud Run",
+      "sku": "Minimum instance idle CPU Singapore",
+      "sku_id": null,
+      "unit": "vCPU-second",
+      "unit_price": 3.5e-06,
+      "source": "https://cloud.google.com/run/pricing"
+    },
+    "run_memory_idle": {
+      "service": "Cloud Run",
+      "sku": "Minimum instance idle memory Singapore",
+      "sku_id": null,
+      "unit": "GiB-second",
+      "unit_price": 3.5e-06,
+      "source": "https://cloud.google.com/run/pricing"
+    },
+    "run_cpu_instance": {
+      "service": "Cloud Run",
+      "sku": "Instance based CPU Singapore",
+      "sku_id": null,
+      "unit": "vCPU-second",
+      "unit_price": 2.16e-05,
+      "source": "https://cloud.google.com/run/pricing"
+    },
+    "run_memory_instance": {
+      "service": "Cloud Run",
+      "sku": "Instance based memory Singapore",
+      "sku_id": null,
+      "unit": "GiB-second",
+      "unit_price": 2.4e-06,
+      "source": "https://cloud.google.com/run/pricing"
+    },
+    "run_request": {
+      "service": "Cloud Run",
+      "sku": "HTTP requests",
+      "sku_id": null,
+      "unit": "request",
+      "unit_price": 4e-07,
+      "source": "https://cloud.google.com/run/pricing"
+    },
+    "firestore_read": {
+      "service": "Firestore",
+      "sku": "Document read Singapore Standard",
+      "sku_id": null,
+      "unit": "operation",
+      "unit_price": 3.69e-07,
+      "source": "https://cloud.google.com/firestore/pricing"
+    },
+    "firestore_write": {
+      "service": "Firestore",
+      "sku": "Document write Singapore Standard",
+      "sku_id": null,
+      "unit": "operation",
+      "unit_price": 1.107e-06,
+      "source": "https://cloud.google.com/firestore/pricing"
+    },
+    "firestore_delete": {
+      "service": "Firestore",
+      "sku": "Document delete Singapore Standard",
+      "sku_id": null,
+      "unit": "operation",
+      "unit_price": 1.23e-07,
+      "source": "https://cloud.google.com/firestore/pricing"
+    },
+    "firestore_storage": {
+      "service": "Firestore",
+      "sku": "Stored data Singapore Standard",
+      "sku_id": null,
+      "unit": "GiB-month",
+      "unit_price": 0.1846,
+      "source": "https://cloud.google.com/firestore/pricing"
+    },
+    "disk_gib_month": {
+      "service": "Compute Engine",
+      "sku": "Standard zonal persistent disk Singapore",
+      "sku_id": null,
+      "unit": "GiB-month",
+      "unit_price": 0.044,
+      "source": "https://cloud.google.com/compute/disks-image-pricing"
+    },
+    "ipv4_hour": {
+      "service": "VPC",
+      "sku": "In-use external IPv4 standard VM",
+      "sku_id": null,
+      "unit": "IP-hour",
+      "unit_price": null,
+      "source": "https://cloud.google.com/vpc/network-pricing"
+    },
+    "egress_gib": {
+      "service": "Network",
+      "sku": "User selected destination and route",
+      "sku_id": null,
+      "unit": "GiB",
+      "unit_price": null,
+      "source": "https://cloud.google.com/vpc/network-pricing"
+    },
+    "logging_gib": {
+      "service": "Observability",
+      "sku": "Logging storage ingestion",
+      "sku_id": null,
+      "unit": "GiB",
+      "unit_price": null,
+      "source": "https://cloud.google.com/stackdriver/pricing"
+    },
+    "monitoring_mib": {
+      "service": "Observability",
+      "sku": "User selected billable metrics",
+      "sku_id": null,
+      "unit": "MiB",
+      "unit_price": null,
+      "source": "https://cloud.google.com/stackdriver/pricing"
+    },
+    "build_minute": {
+      "service": "Cloud Build",
+      "sku": "User selected build machine",
+      "sku_id": null,
+      "unit": "minute",
+      "unit_price": null,
+      "source": "https://cloud.google.com/build/pricing"
+    },
+    "artifact_gib_month": {
+      "service": "Artifact Registry",
+      "sku": "Artifact storage",
+      "sku_id": null,
+      "unit": "GiB-month",
+      "unit_price": null,
+      "source": "https://cloud.google.com/artifact-registry/pricing"
+    }
+  },
+  "free_tier": {
+    "source": "https://cloud.google.com/run/pricing",
+    "request_cpu_credit_usd": 4.32,
+    "request_memory_credit_usd": 0.9,
+    "instance_cpu_credit_usd": 4.32,
+    "instance_memory_credit_usd": 0.9,
+    "requests": 2000000,
+    "firestore_reads_per_day": 50000,
+    "firestore_writes_per_day": 20000,
+    "firestore_deletes_per_day": 20000,
+    "firestore_storage_gib": 1
+  }
+}

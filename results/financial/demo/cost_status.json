@@ -1,0 +1,13 @@
+{
+  "status": "ESTIMATED",
+  "data_mode": "DEMO",
+  "missing_unused_prices": [
+    "ipv4_hour",
+    "egress_gib",
+    "logging_gib",
+    "monitoring_mib",
+    "build_minute",
+    "artifact_gib_month"
+  ],
+  "real_billing_validated": false
+}

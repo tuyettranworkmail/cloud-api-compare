@@ -1,0 +1,11 @@
+{
+  "input_root": "C:\\Users\\Admin\\Downloads\\deadlinePhucHoang\\results\\local_smoke",
+  "data_modes": [
+    "LOCAL_TEST"
+  ],
+  "label": "LOCAL TEST — NOT REAL CLOUD MEASUREMENTS",
+  "runs": 12,
+  "valid_run_groups": 0,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261031
+}

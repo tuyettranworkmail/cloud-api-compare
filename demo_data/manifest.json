@@ -1,0 +1,8 @@
+{
+  "data_mode": "DEMO",
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "seed": 20261031,
+  "runs": 75,
+  "requests": 36840,
+  "real_cloud_measurements": false
+}

@@ -1,0 +1,12 @@
+flowchart TD
+    A[Workload + SLA + control + budget] --> B{Representative REAL evidence?}
+    B -->|No| X[INCONCLUSIVE]
+    B -->|Yes| C[Filter security / OS control / operations / portability]
+    C --> D[Filter duration / background / cold tolerance]
+    D --> E[Filter run CI / error rate / peak capacity]
+    E --> F{Any candidates within budget?}
+    F -->|No| X
+    F -->|Yes| G[Compare estimated full cost + sensitivity]
+    G --> H{Equal suitable costs?}
+    H -->|Yes| I[Use workload preferences or INCONCLUSIVE]
+    H -->|No| J[Recommend lowest-cost eligible configuration]

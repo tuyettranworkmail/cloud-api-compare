@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-10-31T04:24:22.597239+00:00",
+  "workbook_sha256": "abc1c5b6f9125101065b22b9517e6d653cb24aaf376653db6811ac250d1f0029",
+  "native_excel_recalculated": true,
+  "formula_errors": [],
+  "cost_reconciliation": [
+    "OK",
+    "OK",
+    "OK",
+    "OK",
+    "OK",
+    "OK",
+    "OK",
+    "OK",
+    "OK"
+  ],
+  "p95_cross_checks": [
+    {
+      "model": "iaas",
+      "excel_mean_run_p95_ms": 104.96013043639998,
+      "python_mean_run_p95_ms": 104.96013043640001
+    },
+    {
+      "model": "paas",
+      "excel_mean_run_p95_ms": 112.6246764494382,
+      "python_mean_run_p95_ms": 112.62467644943817
+    },
+    {
+      "model": "faas",
+      "excel_mean_run_p95_ms": 105.32928736626766,
+      "python_mean_run_p95_ms": 105.32928736626764
+    }
+  ],
+  "sheets": [
+    "Overview",
+    "Per Run",
+    "Confidence",
+    "Cold Warm",
+    "Scaling",
+    "Burst Phases",
+    "Errors",
+    "Cost Breakdown",
+    "Cost Summary",
+    "Sensitivity",
+    "Pricing Sources",
+    "Assumptions",
+    "Break Even",
+    "Method and Provenance"
+  ],
+  "rendered_sheet_previews": 14,
+  "data_mode": "DEMO"
+}

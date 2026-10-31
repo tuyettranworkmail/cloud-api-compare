@@ -1,0 +1,25 @@
+{
+  "data_mode": "DEMO",
+  "sheets": [
+    "Overview",
+    "Per Run",
+    "Confidence",
+    "Cold Warm",
+    "Scaling",
+    "Burst Phases",
+    "Errors",
+    "Cost Breakdown",
+    "Cost Summary",
+    "Sensitivity",
+    "Pricing Sources",
+    "Assumptions",
+    "Break Even",
+    "Method and Provenance"
+  ],
+  "formulas": 69,
+  "native_charts": 2,
+  "recalculation": "Excel fullCalcOnLoad; delivery additionally recalculated by native Excel if available",
+  "scientific_model": "Python snapshots; rerun CLI for CI/occupancy/sensitivity changes",
+  "source_analysis": "results\\processed\\demo",
+  "source_financial": "results\\financial\\demo"
+}
