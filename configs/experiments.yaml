@@ -1,0 +1,30 @@
+experiment_id: phuc-hoang-v1
+comparison_mode: controlled
+repeats: 5
+seed: 20261031
+cooldown_seconds: 45
+bootstrap_resamples: 2000
+minimum_samples: 30
+load_generator:
+  region: asia-southeast1
+  independent_vm: true
+  require_metadata_server: true
+  maximum_cpu_percent: 85
+  maximum_memory_percent: 90
+safety:
+  budget_usd: 10
+  # A manually verified CONSERVATIVE upper bound including write cleanup, VM,
+  # monitoring, network, idle and cooldown. Missing bound blocks REAL execution.
+  verified_upper_usd_per_request: null
+  verified_upper_usd_per_hour: null
+  max_requests: 100000
+  max_rps: 100
+  quota_verified: false
+  allow_benchmark_writes: false
+  require_resource_snapshot: true
+monitoring:
+  enabled: true
+  settle_seconds: 180
+  poll_seconds: 60
+  logs_enabled: false
+  max_log_entries: 100000

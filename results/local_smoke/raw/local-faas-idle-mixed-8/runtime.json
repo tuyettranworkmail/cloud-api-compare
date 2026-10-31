@@ -1,0 +1,119 @@
+{
+  "idle_seconds": 0,
+  "warm_requests": 3,
+  "interval_seconds": 0.05,
+  "scenario": "idle",
+  "load_level": "low",
+  "endpoint": null,
+  "mix": {
+    "read": 0.7,
+    "write": 0.2,
+    "cpu": 0.1
+  },
+  "preallocated_vus": 2,
+  "max_vus": 10,
+  "graceful_stop_seconds": 2,
+  "rate": 1,
+  "max_rps": 1,
+  "warmup_seconds": 0,
+  "measurement_seconds": 8.2,
+  "offered_requests": 4,
+  "request_bound": 22,
+  "wall_bound_seconds": 535.2,
+  "run_id": "local-faas-idle-mixed-8",
+  "model": "faas",
+  "data_mode": "LOCAL_TEST",
+  "label": "LOCAL TEST — NOT REAL CLOUD MEASUREMENTS",
+  "repeat": 1,
+  "seed": 42,
+  "status": "COMPLETE",
+  "k6_started_at": "2026-10-31T04:04:48.156746+00:00",
+  "url": "http://127.0.0.1:57932",
+  "headers": {},
+  "timeout_seconds": 2,
+  "endpoints": {
+    "read": {
+      "method": "GET",
+      "path": "/api/items/{id}",
+      "expected_status": [
+        200
+      ],
+      "body": null,
+      "response_schema": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "ignore_fields": []
+    },
+    "write": {
+      "method": "POST",
+      "path": "/api/items",
+      "expected_status": [
+        201
+      ],
+      "body": {
+        "name": "benchmark",
+        "value": 42,
+        "benchmark_run_id": "{run_id}",
+        "id": "{write_id}"
+      },
+      "response_schema": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "ignore_fields": [
+        "id"
+      ]
+    },
+    "cpu": {
+      "method": "POST",
+      "path": "/api/cpu",
+      "expected_status": [
+        200
+      ],
+      "body": {
+        "iterations": 10000
+      },
+      "response_schema": {
+        "type": "object",
+        "required": [
+          "result"
+        ],
+        "properties": {
+          "result": {
+            "type": "integer"
+          }
+        }
+      },
+      "ignore_fields": []
+    }
+  },
+  "read_ids": [
+    "item-000001",
+    "item-000002",
+    "item-000003"
+  ],
+  "summary_path": "C:\\Users\\Admin\\Downloads\\deadlinePhucHoang\\results\\local_smoke\\raw\\local-faas-idle-mixed-8\\summary.json"
+}

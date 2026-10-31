@@ -1,0 +1,56 @@
+region: asia-southeast1
+firestore_location: asia-southeast1
+dataset_id: team-seed-v1
+read_ids: ["item-000001", "item-000002", "item-000003"]
+timeout_seconds: 30
+openapi_path: /openapi.json
+headers: {}
+endpoints:
+  read:
+    method: GET
+    path: /api/items/{id}
+    expected_status: [200]
+    body: null
+    response_schema: {type: object, required: [id, name, value], properties: {id: {type: string}, name: {type: string}, value: {type: integer}}}
+    ignore_fields: []
+  write:
+    method: POST
+    path: /api/items
+    expected_status: [201]
+    body: {name: benchmark, value: 42, benchmark_run_id: "{run_id}", id: "{write_id}"}
+    response_schema: {type: object, required: [id], properties: {id: {type: string}}}
+    ignore_fields: [id]
+  cpu:
+    method: POST
+    path: /api/cpu
+    expected_status: [200]
+    body: {iterations: 10000}
+    response_schema: {type: object, required: [result], properties: {result: {type: integer}}}
+    ignore_fields: []
+targets:
+  iaas:
+    url_env: IAAS_URL
+    token_env: IAAS_TOKEN
+    project_env: GCP_PROJECT_ID
+    instance_name: ""
+    zone: asia-southeast1-b
+    instance_id: ""
+    runtime_evidence_file: ""
+    service: ""
+    runtime: python312
+    declared: {vm_type: e2-standard-2, vm_vcpu: 2, vm_memory_gib: 8, app_vcpu: 1, app_memory_gib: 1, workers: 1, concurrency: null, min_instances: 1, max_instances: 1, billing_mode: vm, gateway: none}
+  paas:
+    url_env: PAAS_URL
+    token_env: PAAS_TOKEN
+    project_env: GCP_PROJECT_ID
+    service: ""
+    runtime: python312
+    declared: {app_vcpu: 1, app_memory_gib: 1, workers: 1, concurrency: null, min_instances: 0, max_instances: 10, billing_mode: request, gateway: none}
+  faas:
+    url_env: FAAS_URL
+    token_env: FAAS_TOKEN
+    project_env: GCP_PROJECT_ID
+    service: ""
+    function_name: ""
+    runtime: python312
+    declared: {app_vcpu: 1, app_memory_gib: 1, workers: 1, concurrency: null, min_instances: 0, max_instances: 10, billing_mode: request, gateway: none}

@@ -1,0 +1,32 @@
+{
+  "idle_seconds": 0,
+  "warm_requests": 3,
+  "interval_seconds": 0.05,
+  "scenario": "idle",
+  "load_level": "low",
+  "endpoint": null,
+  "mix": {
+    "read": 0.7,
+    "write": 0.2,
+    "cpu": 0.1
+  },
+  "preallocated_vus": 2,
+  "max_vus": 10,
+  "graceful_stop_seconds": 2,
+  "rate": 1,
+  "max_rps": 1,
+  "warmup_seconds": 0,
+  "measurement_seconds": 8.2,
+  "offered_requests": 4,
+  "request_bound": 26,
+  "wall_bound_seconds": 535.2,
+  "run_id": "local-iaas-idle-mixed-2",
+  "model": "iaas",
+  "data_mode": "LOCAL_TEST",
+  "label": "LOCAL TEST — NOT REAL CLOUD MEASUREMENTS",
+  "repeat": 1,
+  "seed": 42,
+  "status": "COMPLETE",
+  "k6_started_at": "2026-10-31T04:14:23.347613+00:00",
+  "k6_ended_at": "2026-10-31T04:14:23.906505+00:00"
+}

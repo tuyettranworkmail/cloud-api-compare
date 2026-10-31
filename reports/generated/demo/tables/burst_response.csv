@@ -1,0 +1,16 @@
+﻿data_mode,run_id,model,status,degradation_onset_seconds,latency_recovery_seconds,observation_window_seconds,degradation_factor,degradation_offered_rps,baseline_p95_ms
+DEMO,simulated-faas-burst-burst-mixed-r01,faas,NO_DEGRADATION_OBSERVED,,,10,1.5,,138.9097998400393
+DEMO,simulated-faas-burst-burst-mixed-r02,faas,NO_DEGRADATION_OBSERVED,,,10,1.5,,114.87175156880811
+DEMO,simulated-faas-burst-burst-mixed-r03,faas,NO_DEGRADATION_OBSERVED,,,10,1.5,,124.35446440236946
+DEMO,simulated-faas-burst-burst-mixed-r04,faas,NO_DEGRADATION_OBSERVED,,,10,1.5,,130.27440864511559
+DEMO,simulated-faas-burst-burst-mixed-r05,faas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,102.55453756131986
+DEMO,simulated-iaas-burst-burst-mixed-r01,iaas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,92.30988781745447
+DEMO,simulated-iaas-burst-burst-mixed-r02,iaas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,118.36205764635858
+DEMO,simulated-iaas-burst-burst-mixed-r03,iaas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,118.22953492071609
+DEMO,simulated-iaas-burst-burst-mixed-r04,iaas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,82.59923034297998
+DEMO,simulated-iaas-burst-burst-mixed-r05,iaas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,78.21214702330151
+DEMO,simulated-paas-burst-burst-mixed-r01,paas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,80.70852575424037
+DEMO,simulated-paas-burst-burst-mixed-r02,paas,NO_DEGRADATION_OBSERVED,,,10,1.5,,97.76878337028279
+DEMO,simulated-paas-burst-burst-mixed-r03,paas,NO_DEGRADATION_OBSERVED,,,10,1.5,,124.59962690243097
+DEMO,simulated-paas-burst-burst-mixed-r04,paas,DEGRADATION_OBSERVED,10.0,,10,1.5,100.0,106.67240163712474
+DEMO,simulated-paas-burst-burst-mixed-r05,paas,DEGRADATION_OBSERVED,0.0,,10,1.5,10.0,83.7448531318514

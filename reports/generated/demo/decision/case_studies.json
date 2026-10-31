@@ -1,0 +1,360 @@
+[
+  {
+    "case": "API container cần portability cao",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "PAAS",
+      "status": "DEMO_ONLY",
+      "reasons": [
+        "Đạt các điều kiện đã xác minh; chi phí ước tính thấp nhất trong tập phù hợp"
+      ],
+      "risks": [
+        "Chi phí là ước tính theo giả định đã khai báo",
+        "Hiệu năng chỉ có giá trị trong phạm vi workload/cấu hình đã kiểm chứng",
+        "Background, security và portability cần kiểm tra khi đổi cấu hình"
+      ],
+      "candidates": [
+        "iaas",
+        "paas"
+      ],
+      "exclusions": {
+        "faas": [
+          "Yêu cầu portability cao"
+        ]
+      },
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 0.05,
+        "burstiness": 2,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": null,
+        "required_control": "standard",
+        "operational_expertise": "high",
+        "long_running_background": false,
+        "portability": "high",
+        "budget_usd": 100,
+        "peak_rps": 20,
+        "event_driven": false,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": true
+      }
+    }
+  },
+  {
+    "case": "Sự kiện gián đoạn",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "FAAS",
+      "status": "DEMO_ONLY",
+      "reasons": [
+        "Chi phí ngang nhau; ưu tiên event-driven/portability của workload",
+        "Đạt các điều kiện đã xác minh; chi phí ước tính thấp nhất trong tập phù hợp"
+      ],
+      "risks": [
+        "Chi phí là ước tính theo giả định đã khai báo",
+        "Hiệu năng chỉ có giá trị trong phạm vi workload/cấu hình đã kiểm chứng",
+        "Background, security và portability cần kiểm tra khi đổi cấu hình"
+      ],
+      "candidates": [
+        "iaas",
+        "paas",
+        "faas"
+      ],
+      "exclusions": {},
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 0.05,
+        "burstiness": 2,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": null,
+        "required_control": "standard",
+        "operational_expertise": "high",
+        "long_running_background": false,
+        "portability": "medium",
+        "budget_usd": 100,
+        "peak_rps": 20,
+        "event_driven": true,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": true
+      }
+    }
+  },
+  {
+    "case": "Cần quyền OS",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "IAAS",
+      "status": "DEMO_ONLY",
+      "reasons": [
+        "Đạt các điều kiện đã xác minh; chi phí ước tính thấp nhất trong tập phù hợp"
+      ],
+      "risks": [
+        "Chi phí là ước tính theo giả định đã khai báo",
+        "Hiệu năng chỉ có giá trị trong phạm vi workload/cấu hình đã kiểm chứng",
+        "Background, security và portability cần kiểm tra khi đổi cấu hình"
+      ],
+      "candidates": [
+        "iaas"
+      ],
+      "exclusions": {
+        "paas": [
+          "Cần quyền OS"
+        ],
+        "faas": [
+          "Cần quyền OS"
+        ]
+      },
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 0.05,
+        "burstiness": 2,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": null,
+        "required_control": "os",
+        "operational_expertise": "high",
+        "long_running_background": false,
+        "portability": "medium",
+        "budget_usd": 100,
+        "peak_rps": 20,
+        "event_driven": false,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": true
+      }
+    }
+  },
+  {
+    "case": "Cold SLA nghiêm ngặt",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "IAAS",
+      "status": "DEMO_ONLY",
+      "reasons": [
+        "Đạt các điều kiện đã xác minh; chi phí ước tính thấp nhất trong tập phù hợp"
+      ],
+      "risks": [
+        "Chi phí là ước tính theo giả định đã khai báo",
+        "Hiệu năng chỉ có giá trị trong phạm vi workload/cấu hình đã kiểm chứng",
+        "Background, security và portability cần kiểm tra khi đổi cấu hình"
+      ],
+      "candidates": [
+        "iaas"
+      ],
+      "exclusions": {
+        "paas": [
+          "Cold latency chưa đạt hoặc chưa đo"
+        ],
+        "faas": [
+          "Cold latency chưa đạt hoặc chưa đo"
+        ]
+      },
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 0.05,
+        "burstiness": 2,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": 150,
+        "required_control": "standard",
+        "operational_expertise": "high",
+        "long_running_background": false,
+        "portability": "medium",
+        "budget_usd": 100,
+        "peak_rps": 20,
+        "event_driven": false,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": true
+      }
+    }
+  },
+  {
+    "case": "Peak vượt phạm vi đã đo",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "INCONCLUSIVE",
+      "status": "INSUFFICIENT_DATA",
+      "reasons": [
+        "Không có cấu hình nào vượt qua toàn bộ điều kiện/bằng chứng"
+      ],
+      "risks": [],
+      "candidates": [],
+      "exclusions": {
+        "iaas": [
+          "Chưa chứng minh capacity tại peak"
+        ],
+        "paas": [
+          "Chưa chứng minh capacity tại peak"
+        ],
+        "faas": [
+          "Chưa chứng minh capacity tại peak"
+        ]
+      },
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 0.05,
+        "burstiness": 20,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": null,
+        "required_control": "standard",
+        "operational_expertise": "high",
+        "long_running_background": false,
+        "portability": "medium",
+        "budget_usd": 100,
+        "peak_rps": 1000,
+        "event_driven": false,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": true
+      }
+    }
+  },
+  {
+    "case": "Background lâu, chưa xác minh timeout",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "INCONCLUSIVE",
+      "status": "INSUFFICIENT_DATA",
+      "reasons": [
+        "Không có cấu hình nào vượt qua toàn bộ điều kiện/bằng chứng"
+      ],
+      "risks": [],
+      "candidates": [],
+      "exclusions": {
+        "iaas": [
+          "Thời lượng dài cần xác minh timeout thực tế"
+        ],
+        "paas": [
+          "Cấu hình hiện tại chưa xác minh background/lifetime billing",
+          "Thời lượng dài cần xác minh timeout thực tế"
+        ],
+        "faas": [
+          "Cấu hình hiện tại chưa xác minh background/lifetime billing",
+          "Thời lượng dài cần xác minh timeout thực tế"
+        ]
+      },
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 7200,
+        "burstiness": 2,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": null,
+        "required_control": "standard",
+        "operational_expertise": "high",
+        "long_running_background": true,
+        "portability": "medium",
+        "budget_usd": 100,
+        "peak_rps": 20,
+        "event_driven": false,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": true
+      }
+    }
+  },
+  {
+    "case": "Không đủ ngân sách",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "INCONCLUSIVE",
+      "status": "INSUFFICIENT_DATA",
+      "reasons": [
+        "Không có cấu hình nào vượt qua toàn bộ điều kiện/bằng chứng"
+      ],
+      "risks": [],
+      "candidates": [],
+      "exclusions": {
+        "iaas": [
+          "Vượt budget"
+        ],
+        "paas": [
+          "Vượt budget"
+        ],
+        "faas": [
+          "Vượt budget"
+        ]
+      },
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 0.05,
+        "burstiness": 2,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": null,
+        "required_control": "standard",
+        "operational_expertise": "high",
+        "long_running_background": false,
+        "portability": "medium",
+        "budget_usd": 1,
+        "peak_rps": 20,
+        "event_driven": false,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": true
+      }
+    }
+  },
+  {
+    "case": "Chưa có dữ liệu thật",
+    "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+    "result": {
+      "recommendation": "INCONCLUSIVE",
+      "status": "INSUFFICIENT_DATA",
+      "reasons": [
+        "Chưa xác nhận benchmark đại diện cho workload, cấu hình và traffic profile này"
+      ],
+      "risks": [],
+      "candidates": [],
+      "exclusions": {},
+      "workload": {
+        "monthly_requests": 100000,
+        "average_duration_seconds": 0.05,
+        "burstiness": 2,
+        "idle_ratio": 0.6,
+        "latency_sla_ms": 200,
+        "cold_tolerance_ms": null,
+        "required_control": "standard",
+        "operational_expertise": "high",
+        "long_running_background": false,
+        "portability": "medium",
+        "budget_usd": 100,
+        "peak_rps": 20,
+        "event_driven": false,
+        "approved_models": [
+          "iaas",
+          "paas",
+          "faas"
+        ],
+        "evidence_scope_verified": false
+      }
+    }
+  }
+]
