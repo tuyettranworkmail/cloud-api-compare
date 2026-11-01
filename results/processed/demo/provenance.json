@@ -1,0 +1,11 @@
+{
+  "input_root": "C:\\Users\\Admin\\Downloads\\deadlinePhucHoang\\demo_data",
+  "data_modes": [
+    "DEMO"
+  ],
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "runs": 75,
+  "valid_run_groups": 205,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261031
+}

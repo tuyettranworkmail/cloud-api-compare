@@ -1,0 +1,13 @@
+﻿data_mode,run_id,model,scenario,relative_seconds,burst_phase,request_count,achieved_rps,p95_ms,p99_ms,error_rate_pct
+LOCAL_TEST,local-faas-burst-mixed-7,faas,burst,0,baseline,25,3.125,10.771759999999999,13.628335999999994,0.0
+LOCAL_TEST,local-faas-idle-mixed-8,faas,idle,0,baseline,4,0.48780487804878053,5.10215,5.13179,0.0
+LOCAL_TEST,local-faas-steady-mixed-6,faas,steady,0,baseline,5,2.5,5.711639999999999,6.486168,0.0
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,burst,0,baseline,24,3.0,12.489915,13.809883999999998,0.0
+LOCAL_TEST,local-iaas-idle-mixed-2,iaas,idle,0,baseline,4,0.48780487804878053,10.840505,11.061701000000001,0.0
+LOCAL_TEST,local-iaas-steady-cpu-11,iaas,steady,0,baseline,5,2.5,6.4232,7.04808,0.0
+LOCAL_TEST,local-iaas-steady-mixed-0,iaas,steady,0,baseline,4,2.0,12.032409999999999,12.584242,0.0
+LOCAL_TEST,local-iaas-steady-read-9,iaas,steady,0,baseline,5,2.5,6.5351,6.68558,0.0
+LOCAL_TEST,local-iaas-steady-write-10,iaas,steady,0,baseline,4,2.0,3.323155,3.344791,0.0
+LOCAL_TEST,local-paas-burst-mixed-4,paas,burst,0,baseline,24,3.0,13.247934999999995,13.828788999999999,0.0
+LOCAL_TEST,local-paas-idle-mixed-5,paas,idle,0,baseline,4,0.48780487804878053,8.79117,9.067433999999999,0.0
+LOCAL_TEST,local-paas-steady-mixed-3,paas,steady,0,baseline,4,2.0,5.066195,5.195398999999999,0.0

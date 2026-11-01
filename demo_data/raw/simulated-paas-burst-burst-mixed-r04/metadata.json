@@ -1,0 +1,43 @@
+{
+  "warmup_seconds": 3,
+  "baseline_rps": 10,
+  "peak_rps": 100,
+  "baseline_seconds": 6,
+  "ramp_seconds": 1,
+  "hold_seconds": 6,
+  "recovery_seconds": 6,
+  "scenario": "burst",
+  "load_level": "burst",
+  "endpoint": null,
+  "mix": {
+    "read": 0.7,
+    "write": 0.2,
+    "cpu": 0.1
+  },
+  "preallocated_vus": 30,
+  "max_vus": 200,
+  "graceful_stop_seconds": 35,
+  "rate": 10,
+  "measurement_seconds": 20,
+  "offered_requests": 860,
+  "max_rps": 100,
+  "request_bound": 878,
+  "wall_bound_seconds": 583,
+  "model": "paas",
+  "repeat": 4,
+  "seed": 20261031,
+  "run_id": "simulated-paas-burst-burst-mixed-r04",
+  "data_mode": "DEMO",
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "status": "COMPLETE",
+  "attempt": 1,
+  "measurement_started_at": "2026-10-03T08:00:00+00:00",
+  "k6_started_at": "2026-10-03T07:59:57+00:00",
+  "started_at": "2026-10-03T08:00:00+00:00",
+  "simulation": {
+    "purpose": "pipeline validation only",
+    "cloud_measured": false,
+    "generator": "seeded lognormal latency with errors and outliers",
+    "fairness": "synthetic arrivals are illustrative; not evidence of GCP differences"
+  }
+}

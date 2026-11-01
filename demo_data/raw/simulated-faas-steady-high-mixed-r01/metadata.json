@@ -1,0 +1,42 @@
+{
+  "rates": {
+    "low": 5,
+    "medium": 20,
+    "high": 50
+  },
+  "warmup_seconds": 3,
+  "measurement_seconds": 18,
+  "scenario": "steady",
+  "load_level": "high",
+  "endpoint": null,
+  "mix": {
+    "read": 0.7,
+    "write": 0.2,
+    "cpu": 0.1
+  },
+  "preallocated_vus": 30,
+  "max_vus": 200,
+  "graceful_stop_seconds": 35,
+  "rate": 50,
+  "offered_requests": 1050,
+  "max_rps": 50,
+  "request_bound": 1068,
+  "wall_bound_seconds": 581,
+  "model": "faas",
+  "repeat": 1,
+  "seed": 20261031,
+  "run_id": "simulated-faas-steady-high-mixed-r01",
+  "data_mode": "DEMO",
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "status": "COMPLETE",
+  "attempt": 1,
+  "measurement_started_at": "2026-10-01T07:00:00+00:00",
+  "k6_started_at": "2026-10-01T06:59:57+00:00",
+  "started_at": "2026-10-01T07:00:00+00:00",
+  "simulation": {
+    "purpose": "pipeline validation only",
+    "cloud_measured": false,
+    "generator": "seeded lognormal latency with errors and outliers",
+    "fairness": "synthetic arrivals are illustrative; not evidence of GCP differences"
+  }
+}

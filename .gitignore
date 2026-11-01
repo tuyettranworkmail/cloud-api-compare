@@ -1,16 +1,11 @@
-__pycache__/
-*.pyc
 .venv/
-.pytest_cache/
-# Terraform
-.terraform/
-*.tfstate
-*.tfstate.*
-*.tfvars
-!example.tfvars
-crash.log
-# Bí mật: KHÔNG commit
-*.json.key
-service-account*.json
 .env
-# Kết quả đo thô: commit có chủ đích (xem bench/README)
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.ipynb_checkpoints/
+.tools/
+results/raw/
+results/monitoring/
+*.log

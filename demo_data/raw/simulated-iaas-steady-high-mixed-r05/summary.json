@@ -1,0 +1,13 @@
+{
+  "data_mode": "DEMO",
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "metrics": {
+    "request_sample_ms": {
+      "values": {
+        "count": 1050,
+        "avg": 63.65407845500693,
+        "p(95)": 145.2497809532138
+      }
+    }
+  }
+}

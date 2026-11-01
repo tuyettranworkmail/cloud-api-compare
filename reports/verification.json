@@ -1,0 +1,47 @@
+{
+  "verified_at_utc": "2026-10-31T04:25:18.682548+00:00",
+  "user_timezone": "Asia/Saigon",
+  "python": "3.12.12 (main, Dec  9 2025, 19:02:55) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "k6": "k6.exe v2.3.0 (commit/e088784614, go1.26.8, windows/amd64)",
+  "checks": {
+    "pytest": {
+      "passed": true,
+      "exit_code": 0,
+      "log": "reports/verification_pytest.log"
+    },
+    "ruff": {
+      "passed": true,
+      "exit_code": 0,
+      "log": "reports/verification_ruff.log"
+    },
+    "configuration": {
+      "passed": true,
+      "exit_code": 0,
+      "log": "reports/verification_configuration.log"
+    },
+    "dry_run": {
+      "passed": true,
+      "exit_code": 0,
+      "log": "reports/verification_dry_run.log"
+    }
+  },
+  "tests": 71,
+  "test_failures": 0,
+  "notebook_executed": true,
+  "local_k6": {
+    "all_passed": true,
+    "jobs": 12,
+    "path": "results\\local_smoke\\2026-10-31T04-14-08.045095+00-00\\summary.json"
+  },
+  "demo_runs": 75,
+  "demo_requests": 36840,
+  "figures_png": 24,
+  "figures_svg": 24,
+  "gcp_benchmark": "NOT_EXECUTED",
+  "real_cloud_metrics_collection": "NOT_EXECUTED_REQUIRES_ADC_AND_RESOURCE_IDENTIFIERS",
+  "real_api_contract_validation": "NOT_EXECUTED_REQUIRES_TARGET_URLS",
+  "billing_invoice_reconciled": false,
+  "excel_export": "IMPLEMENTED_OPENPYXL_USER_SELECTED",
+  "all_local_checks_passed": true
+}

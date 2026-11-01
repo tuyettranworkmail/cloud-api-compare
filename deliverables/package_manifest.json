@@ -1,0 +1,17 @@
+{
+  "archive": "benchmark-cost-analysis.zip",
+  "sha256": "40b914ef190e9728f65ce3b80d706c303c29c0e2bfb2aee700da8cfd0488afdd",
+  "files": 698,
+  "bytes": 12886445,
+  "excluded": [
+    ".git",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".tools",
+    ".venv",
+    "__pycache__",
+    "deliverables",
+    "excel_previews"
+  ],
+  "cloud_raw_included": false
+}

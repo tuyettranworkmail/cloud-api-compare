@@ -1,0 +1,58 @@
+{
+  "disk": {
+    "url": "https://cloud.google.com/compute/disks-image-pricing",
+    "retrieved_at": "2026-10-31T03:56:40.568241+00:00",
+    "archive_sha256": "b9ee2f6c164690df954e03713af77a6db2ce72c05e31e5e957b513106393b339",
+    "regional_tables": 16,
+    "status": "TABLES_EXTRACTED_REVIEW_REQUIRED"
+  },
+  "network": {
+    "url": "https://cloud.google.com/vpc/network-pricing",
+    "retrieved_at": "2026-10-31T03:56:41.532907+00:00",
+    "archive_sha256": "3795ad4efc2ed76eaad12072244c89bb185bcbf9648a467e84f23b746342d248",
+    "regional_tables": 11,
+    "status": "TABLES_EXTRACTED_REVIEW_REQUIRED"
+  },
+  "build": {
+    "url": "https://cloud.google.com/build/pricing",
+    "retrieved_at": "2026-10-31T03:56:43.549491+00:00",
+    "archive_sha256": "53991e5345a8054ee2a7cbe6c7a4ba3e320760185ae932011329545c01354f18",
+    "regional_tables": 16,
+    "status": "TABLES_EXTRACTED_REVIEW_REQUIRED"
+  },
+  "artifact": {
+    "url": "https://cloud.google.com/artifact-registry/pricing",
+    "retrieved_at": "2026-10-31T03:56:45.169566+00:00",
+    "archive_sha256": "45195bca3a74d6fb549f44fe48319cfb45b73d385970ae19ee940693169599b9",
+    "regional_tables": 0,
+    "status": "GLOBAL_TABLE_REVIEW_REQUIRED"
+  },
+  "observability": {
+    "url": "https://cloud.google.com/stackdriver/pricing",
+    "retrieved_at": "2026-10-31T03:56:46.039668+00:00",
+    "archive_sha256": "0bd06dbe2711fabdc7b1f9dd4176647f9dfc22492c7388ec0791fa0228830192",
+    "regional_tables": 0,
+    "status": "GLOBAL_TABLE_REVIEW_REQUIRED"
+  },
+  "run": {
+    "url": "https://cloud.google.com/run/pricing",
+    "retrieved_at": "2026-10-31T04:06:58.995499+00:00",
+    "archive_sha256": "abe0935f2213820dfd6a27b6a6d52860f70995aa064c4e66682f8bc87b3cc3e8",
+    "regional_tables": 16,
+    "status": "REVIEWED_CATALOG_VALUES"
+  },
+  "vm": {
+    "url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "retrieved_at": "2026-10-31T04:07:00.916310+00:00",
+    "archive_sha256": "fe5a4e0738b7bd54cc125e3c61acd1b0ff635b9720f7aad9011c815c4ee8abf0",
+    "regional_tables": 252,
+    "status": "REVIEWED_CATALOG_VALUES"
+  },
+  "firestore": {
+    "url": "https://cloud.google.com/firestore/pricing",
+    "retrieved_at": "2026-10-31T04:07:01.028982+00:00",
+    "archive_sha256": "79b5723e9c70995eb9b485945fa8d08fb3e5738699f1c49a8abf504ed2011a18",
+    "regional_tables": 4,
+    "status": "REVIEWED_CATALOG_VALUES"
+  }
+}

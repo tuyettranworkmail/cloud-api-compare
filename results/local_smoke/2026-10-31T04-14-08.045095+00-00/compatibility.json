@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-10-31T04:14:10.044659+00:00",
+  "passed": true,
+  "models": {
+    "iaas": {
+      "checks": [
+        {
+          "endpoint": "read",
+          "passed": true,
+          "trials": 3
+        },
+        {
+          "endpoint": "write",
+          "passed": true,
+          "trials": 1
+        },
+        {
+          "endpoint": "cpu",
+          "passed": true,
+          "trials": 2
+        }
+      ],
+      "timeout_seconds": 2,
+      "auth": "none",
+      "contract_hash": "f67e5832066953970175444a944c04135a323c899db28b25e13096685b9e23b3"
+    },
+    "paas": {
+      "checks": [
+        {
+          "endpoint": "read",
+          "passed": true,
+          "trials": 3
+        },
+        {
+          "endpoint": "write",
+          "passed": true,
+          "trials": 1
+        },
+        {
+          "endpoint": "cpu",
+          "passed": true,
+          "trials": 2
+        }
+      ],
+      "timeout_seconds": 2,
+      "auth": "none",
+      "contract_hash": "f67e5832066953970175444a944c04135a323c899db28b25e13096685b9e23b3"
+    },
+    "faas": {
+      "checks": [
+        {
+          "endpoint": "read",
+          "passed": true,
+          "trials": 3
+        },
+        {
+          "endpoint": "write",
+          "passed": true,
+          "trials": 1
+        },
+        {
+          "endpoint": "cpu",
+          "passed": true,
+          "trials": 2
+        }
+      ],
+      "timeout_seconds": 2,
+      "auth": "none",
+      "contract_hash": "f67e5832066953970175444a944c04135a323c899db28b25e13096685b9e23b3"
+    }
+  },
+  "errors": [],
+  "scope": "all read_ids; two deterministic CPU trials; schema and normalized write response"
+}

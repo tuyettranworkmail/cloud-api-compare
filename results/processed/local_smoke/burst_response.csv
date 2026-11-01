@@ -1,0 +1,4 @@
+﻿data_mode,run_id,model,status,degradation_onset_seconds,latency_recovery_seconds,observation_window_seconds,degradation_factor,degradation_offered_rps
+LOCAL_TEST,local-faas-burst-mixed-7,faas,INSUFFICIENT_DATA,,,10,1.5,
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,INSUFFICIENT_DATA,,,10,1.5,
+LOCAL_TEST,local-paas-burst-mixed-4,paas,INSUFFICIENT_DATA,,,10,1.5,

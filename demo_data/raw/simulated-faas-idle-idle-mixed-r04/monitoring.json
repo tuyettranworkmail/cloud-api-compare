@@ -1,0 +1,228 @@
+{
+  "data_mode": "DEMO",
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "sampling_seconds": 60,
+  "visibility_delay_seconds": 120,
+  "series": [
+    {
+      "alias": "instance_count",
+      "unit": "1",
+      "metric": {
+        "labels": {}
+      },
+      "resource": {
+        "labels": {}
+      },
+      "points": [
+        {
+          "interval": {
+            "end_time": "2026-10-03T10:59:00+00:00"
+          },
+          "value": {
+            "int64_value": "1"
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:00:00+00:00"
+          },
+          "value": {
+            "int64_value": "1"
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:01:00+00:00"
+          },
+          "value": {
+            "int64_value": "1"
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:02:00+00:00"
+          },
+          "value": {
+            "int64_value": "1"
+          }
+        }
+      ]
+    },
+    {
+      "alias": "cpu",
+      "unit": "1",
+      "metric": {
+        "labels": {}
+      },
+      "resource": {
+        "labels": {}
+      },
+      "points": [
+        {
+          "interval": {
+            "end_time": "2026-10-03T10:59:00+00:00"
+          },
+          "value": {
+            "double_value": 0.2698429009679254
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:00:00+00:00"
+          },
+          "value": {
+            "double_value": 0.7611040429919707
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:01:00+00:00"
+          },
+          "value": {
+            "double_value": 0.15703066176090785
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:02:00+00:00"
+          },
+          "value": {
+            "double_value": 0.678179091368466
+          }
+        }
+      ]
+    },
+    {
+      "alias": "memory",
+      "unit": "1",
+      "metric": {
+        "labels": {}
+      },
+      "resource": {
+        "labels": {}
+      },
+      "points": [
+        {
+          "interval": {
+            "end_time": "2026-10-03T10:59:00+00:00"
+          },
+          "value": {
+            "double_value": 0.2642181011335593
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:00:00+00:00"
+          },
+          "value": {
+            "double_value": 0.5987798356316583
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:01:00+00:00"
+          },
+          "value": {
+            "double_value": 0.6333550369765866
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:02:00+00:00"
+          },
+          "value": {
+            "double_value": 0.31133640268793805
+          }
+        }
+      ]
+    },
+    {
+      "alias": "startup_latency",
+      "unit": "ms",
+      "metric": {
+        "labels": {}
+      },
+      "resource": {
+        "labels": {}
+      },
+      "points": [
+        {
+          "interval": {
+            "end_time": "2026-10-03T10:59:00+00:00"
+          },
+          "value": {
+            "double_value": 118.69318421536153
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:00:00+00:00"
+          },
+          "value": {
+            "double_value": 478.8890780722869
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:01:00+00:00"
+          },
+          "value": {
+            "double_value": 258.47653083039074
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:02:00+00:00"
+          },
+          "value": {
+            "double_value": 370.2738010997112
+          }
+        }
+      ]
+    },
+    {
+      "alias": "billable_instance_time",
+      "unit": "s",
+      "metric": {
+        "labels": {}
+      },
+      "resource": {
+        "labels": {}
+      },
+      "points": [
+        {
+          "interval": {
+            "end_time": "2026-10-03T10:59:00+00:00"
+          },
+          "value": {
+            "double_value": 12
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:00:00+00:00"
+          },
+          "value": {
+            "double_value": 12
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:01:00+00:00"
+          },
+          "value": {
+            "double_value": 12
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-03T11:02:00+00:00"
+          },
+          "value": {
+            "double_value": 12
+          }
+        }
+      ]
+    }
+  ]
+}

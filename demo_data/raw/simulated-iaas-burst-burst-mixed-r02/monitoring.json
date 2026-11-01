@@ -1,0 +1,96 @@
+{
+  "data_mode": "DEMO",
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "sampling_seconds": 60,
+  "visibility_delay_seconds": 120,
+  "series": [
+    {
+      "alias": "cpu",
+      "unit": "1",
+      "metric": {
+        "labels": {}
+      },
+      "resource": {
+        "labels": {}
+      },
+      "points": [
+        {
+          "interval": {
+            "end_time": "2026-10-02T01:59:00+00:00"
+          },
+          "value": {
+            "double_value": 0.6467904603807191
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-02T02:00:00+00:00"
+          },
+          "value": {
+            "double_value": 0.5185579813254775
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-02T02:01:00+00:00"
+          },
+          "value": {
+            "double_value": 0.48658091986693275
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-02T02:02:00+00:00"
+          },
+          "value": {
+            "double_value": 0.39938369002937724
+          }
+        }
+      ]
+    },
+    {
+      "alias": "memory",
+      "unit": "1",
+      "metric": {
+        "labels": {}
+      },
+      "resource": {
+        "labels": {}
+      },
+      "points": [
+        {
+          "interval": {
+            "end_time": "2026-10-02T01:59:00+00:00"
+          },
+          "value": {
+            "double_value": 0.5232241840970434
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-02T02:00:00+00:00"
+          },
+          "value": {
+            "double_value": 0.7508555443800281
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-02T02:01:00+00:00"
+          },
+          "value": {
+            "double_value": 0.2971028660615831
+          }
+        },
+        {
+          "interval": {
+            "end_time": "2026-10-02T02:02:00+00:00"
+          },
+          "value": {
+            "double_value": 0.7633067668412361
+          }
+        }
+      ]
+    }
+  ]
+}

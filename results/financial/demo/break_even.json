@@ -1,0 +1,87 @@
+[
+  {
+    "left": "iaas",
+    "right": "paas",
+    "status": "ROOTS_FOUND",
+    "roots": [
+      22234780.990233496
+    ],
+    "coincident_intervals": [],
+    "discontinuities": [],
+    "domain": [
+      0,
+      1000000000.0
+    ],
+    "search_resolution": {
+      "grid_size": 122,
+      "known_breakpoints": 0,
+      "method": "log grid + supplied knots + Brent + residual validation",
+      "limitation": "finite search cannot guarantee every narrow/tangent intersection"
+    },
+    "root_details": [
+      {
+        "requests": 22234780.990233496,
+        "cost_usd": 71.636906641015,
+        "left_capacity": "UNVERIFIED",
+        "right_capacity": "ESTIMATED_SUPPORTED",
+        "operationally_feasible": false
+      }
+    ],
+    "interpretation": "financial intersections only; feasible only when both capacity/SLA validated"
+  },
+  {
+    "left": "iaas",
+    "right": "faas",
+    "status": "ROOTS_FOUND",
+    "roots": [
+      22234780.990233496
+    ],
+    "coincident_intervals": [],
+    "discontinuities": [],
+    "domain": [
+      0,
+      1000000000.0
+    ],
+    "search_resolution": {
+      "grid_size": 122,
+      "known_breakpoints": 0,
+      "method": "log grid + supplied knots + Brent + residual validation",
+      "limitation": "finite search cannot guarantee every narrow/tangent intersection"
+    },
+    "root_details": [
+      {
+        "requests": 22234780.990233496,
+        "cost_usd": 71.636906641015,
+        "left_capacity": "UNVERIFIED",
+        "right_capacity": "ESTIMATED_SUPPORTED",
+        "operationally_feasible": false
+      }
+    ],
+    "interpretation": "financial intersections only; feasible only when both capacity/SLA validated"
+  },
+  {
+    "left": "paas",
+    "right": "faas",
+    "status": "COINCIDENT_INTERVAL",
+    "roots": [],
+    "coincident_intervals": [
+      [
+        0.0,
+        1000000000.0
+      ]
+    ],
+    "discontinuities": [],
+    "domain": [
+      0,
+      1000000000.0
+    ],
+    "search_resolution": {
+      "grid_size": 122,
+      "known_breakpoints": 0,
+      "method": "log grid + supplied knots + Brent + residual validation",
+      "limitation": "finite search cannot guarantee every narrow/tangent intersection"
+    },
+    "root_details": [],
+    "interpretation": "financial intersections only; feasible only when both capacity/SLA validated"
+  }
+]

@@ -1,0 +1,16 @@
+﻿data_mode,run_id,model,stage,request_count,p95_ms,p99_ms,error_rate_pct,cohort_rps
+LOCAL_TEST,local-faas-burst-mixed-7,faas,baseline,3,10.36558,10.723996,0.0,1.5
+LOCAL_TEST,local-faas-burst-mixed-7,faas,hold,10,9.051319999999999,9.474104,0.0,5.0
+LOCAL_TEST,local-faas-burst-mixed-7,faas,ramp_down,3,8.02372,8.053384000000001,0.0,3.0
+LOCAL_TEST,local-faas-burst-mixed-7,faas,ramp_up,4,13.504609999999998,14.314682,0.0,4.0
+LOCAL_TEST,local-faas-burst-mixed-7,faas,recovery,5,10.13318,10.510156,0.0,2.5
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,baseline,3,7.359789999999999,7.792918,0.0,1.5
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,hold,10,11.348429999999997,12.283206,0.0,5.0
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,ramp_down,3,8.94126,9.065452,0.0,3.0
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,ramp_up,4,10.800534999999998,11.196667,0.0,4.0
+LOCAL_TEST,local-iaas-burst-mixed-1,iaas,recovery,4,13.917234999999998,14.140327,0.0,2.0
+LOCAL_TEST,local-paas-burst-mixed-4,paas,baseline,3,5.84214,5.952108,0.0,1.5
+LOCAL_TEST,local-paas-burst-mixed-4,paas,hold,10,12.474339999999996,13.592068,0.0,5.0
+LOCAL_TEST,local-paas-burst-mixed-4,paas,ramp_down,3,7.13915,7.288390000000001,0.0,3.0
+LOCAL_TEST,local-paas-burst-mixed-4,paas,ramp_up,4,12.660339999999998,13.480707999999998,0.0,4.0
+LOCAL_TEST,local-paas-burst-mixed-4,paas,recovery,4,7.748615,8.072603,0.0,2.0

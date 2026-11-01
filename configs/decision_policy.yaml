@@ -1,0 +1,8 @@
+# Capability limits must be reviewed with deployment owners; null = unknown.
+capabilities:
+  iaas: {os_control: true, min_ops_expertise: high, portability: high, background: true, max_request_seconds: null}
+  paas: {os_control: false, min_ops_expertise: low, portability: high, background: false, max_request_seconds: null}
+  faas: {os_control: false, min_ops_expertise: low, portability: medium, background: false, max_request_seconds: null}
+minimum_runs: 5
+maximum_error_rate_pct: 1
+evidence_scope: Must match endpoint mix, CPU input, data, configuration and traffic shape; manual attestation required.

@@ -1,0 +1,40 @@
+{
+  "idle_seconds": 1200,
+  "warm_requests": 20,
+  "interval_seconds": 1,
+  "scenario": "idle",
+  "load_level": "idle",
+  "endpoint": null,
+  "mix": {
+    "read": 0.7,
+    "write": 0.2,
+    "cpu": 0.1
+  },
+  "preallocated_vus": 30,
+  "max_vus": 200,
+  "graceful_stop_seconds": 35,
+  "rate": 1,
+  "max_rps": 1,
+  "warmup_seconds": 0,
+  "measurement_seconds": 651,
+  "offered_requests": 21,
+  "request_bound": 39,
+  "wall_bound_seconds": 2411,
+  "model": "iaas",
+  "repeat": 4,
+  "seed": 20261031,
+  "run_id": "simulated-iaas-idle-idle-mixed-r04",
+  "data_mode": "DEMO",
+  "label": "SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS",
+  "status": "COMPLETE",
+  "attempt": 1,
+  "measurement_started_at": "2026-10-03T09:00:00+00:00",
+  "k6_started_at": "2026-10-03T09:00:00+00:00",
+  "started_at": "2026-10-03T09:00:00+00:00",
+  "simulation": {
+    "purpose": "pipeline validation only",
+    "cloud_measured": false,
+    "generator": "seeded lognormal latency with errors and outliers",
+    "fairness": "synthetic arrivals are illustrative; not evidence of GCP differences"
+  }
+}

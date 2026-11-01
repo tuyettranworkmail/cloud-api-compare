@@ -1,0 +1,43 @@
+data_mode: DEMO
+label: 'SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS'
+traffic_levels: {low: 100000, medium: 2000000, high: 20000000}
+assumptions:
+  mix: {read: 0.7, write: 0.2, cpu: 0.1}
+  mean_duration_seconds: {read: 0.04, write: 0.06, cpu: 0.15}
+  mean_cpu_seconds: {read: 0.002, write: 0.004, cpu: 0.12}
+  days: 30
+  vm_hours: 730
+  distribution: uniform
+  active_hours_per_day: 8
+  peak_to_average: 5
+  idle_ratio: 0.5
+  response_bytes: 1024
+  internet_egress_fraction: 0
+  firestore_reads_per_get: 1
+  firestore_writes_per_post: 1
+  firestore_deletes_per_request: 0
+  firestore_index_read_batches_per_get: 0
+  firestore_retry_multiplier: 1
+  firestore_storage_gib: 1
+  firestore_network_usd: 0
+  firestore_optional_usd: 0
+  disk_gib: 10
+  external_ipv4_count: 0
+  logging_gib: 0
+  monitoring_mib: 0
+  artifact_gib: 0
+  build_minutes: 0
+  backup_usd: 0
+  auxiliary_usd: 0
+  labor_usd_per_hour: 0
+  price_multiplier: 1
+  free_tier: false
+  free_tier_eligible: false
+  free_tier_remaining_fraction: 1
+  firestore_free_eligible: false
+  # One mutually exclusive deployment alternative using the remaining account credit.
+  free_tier_scope: mutually_exclusive_alternatives
+models:
+  iaas: {billing_mode: vm, vm_count: 1, capacity_rps: null, labor_hours: 0}
+  paas: {billing_mode: request, vcpu: 1, memory_gib: 1, concurrency: 10, min_instances: 0, max_instances: 10, target_cpu_utilization: 0.6, startup_count: 50, startup_seconds: 1, shutdown_seconds: 0, scale_down_tail_seconds: 900, labor_hours: 0, measured_active_instance_seconds: null, measured_lifetime_instance_seconds: null}
+  faas: {billing_mode: request, vcpu: 1, memory_gib: 1, concurrency: 10, min_instances: 0, max_instances: 10, target_cpu_utilization: 0.6, startup_count: 50, startup_seconds: 1, shutdown_seconds: 0, scale_down_tail_seconds: 900, labor_hours: 0, measured_active_instance_seconds: null, measured_lifetime_instance_seconds: null}

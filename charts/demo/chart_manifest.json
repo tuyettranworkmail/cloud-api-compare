@@ -1,0 +1,146 @@
+[
+  {
+    "name": "01_latency_quantiles",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\per_run.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "02_latency_vs_offered",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\per_run.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "03_throughput_vs_offered",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\per_run.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "04_error_vs_load",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\per_run.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "05_endpoint_comparison",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\endpoint_summary.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "06_latency_ecdf",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\requests.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "07_latency_boxplot",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\requests.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "08_confidence_intervals",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\comparison.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "09_burst_request_rate",
+    "folder": "scaling",
+    "source": "results\\processed\\demo\\timeline.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "11_burst_p95",
+    "folder": "scaling",
+    "source": "results\\processed\\demo\\timeline.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "10_instance_count",
+    "folder": "scaling",
+    "source": "results\\processed\\demo\\monitoring.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "12_cold_warm",
+    "folder": "scaling",
+    "source": "results\\processed\\demo\\cold_warm.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "13_scale_out_intervals",
+    "folder": "scaling",
+    "source": "results\\processed\\demo\\scaling.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "14_after_idle",
+    "folder": "scaling",
+    "source": "results\\processed\\demo\\requests.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "15_cost_breakdown",
+    "folder": "cost",
+    "source": "results\\financial\\demo\\cost_breakdown.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "16_cost_levels",
+    "folder": "cost",
+    "source": "results\\financial\\demo\\cost_levels.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "17_cost_vs_requests",
+    "folder": "cost",
+    "source": "results\\financial\\demo\\cost_curve.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "18_break_even",
+    "folder": "cost",
+    "source": "results\\financial\\demo\\break_even.json",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "19_cost_per_million",
+    "folder": "cost",
+    "source": "results\\financial\\demo\\cost_curve.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "20_sensitivity_tornado",
+    "folder": "cost",
+    "source": "results\\financial\\demo\\sensitivity.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "21_performance_cost_tradeoff",
+    "folder": "performance",
+    "source": "results\\processed\\demo/per_run.csv + results\\financial\\demo/cost_levels.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "22_latency_cost_scatter",
+    "folder": "performance",
+    "source": "results\\processed\\demo/per_run.csv + results\\financial\\demo/cost_levels.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "23_sla_comparison",
+    "folder": "performance",
+    "source": "results\\processed\\demo\\per_run.csv",
+    "data_mode": "DEMO"
+  },
+  {
+    "name": "24_decision_tree",
+    "folder": "decision_tree",
+    "source": "benchmark/decision_engine/engine.py; decision_tree.mmd",
+    "data_mode": "DEMO"
+  }
+]
