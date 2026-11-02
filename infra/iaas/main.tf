@@ -115,7 +115,7 @@ resource "google_compute_instance" "api" {
     enable-oslogin = "TRUE"
   }
 
-  metadata_startup_script = templatefile("${path.module}/startup.sh.tpl", {
+  metadata_startup_script = replace(templatefile("${path.module}/startup.sh.tpl", {
     registry_host     = local.registry_host
     image             = local.image
     project_id        = var.project_id
@@ -123,7 +123,7 @@ resource "google_compute_instance" "api" {
     cpus              = var.container_cpus
     memory            = var.container_memory
     install_ops_agent = var.install_ops_agent
-  })
+  }), "\r\n", "\n")
 
   depends_on = [
     google_artifact_registry_repository_iam_member.vm_pull,
