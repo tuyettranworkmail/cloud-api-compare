@@ -62,6 +62,13 @@
 - Việc người vận hành phải tự quản: Kiểm tra git status, nội dung staged changes, kiểm tra các file bị xóa ngoài ý muốn trước khi commit và push.
 - Ghi chú: Tham gia khôi phục mã nguồn bằng Git, giúp đưa các thư mục quan trọng trở lại nhánh main. Sau sự cố, nhóm bổ sung quy trình kiểm tra git diff --cached --name-status trước mỗi commit.
 
+## [2026-11-03, giờ không xác định] iaas — Triển khai VM và xác minh API
+- Số bước thao tác: 9 tài nguyên Terraform được tạo; sau đó thay thế 1 VM để sửa startup script.
+- Thời gian thực tế (phút): Chưa ghi nhận chính xác.
+- Lỗi gặp phải và cách xử lý: Lần khởi động đầu tiên thất bại vì file startup có xuống dòng Windows, khiến shebang `/bin/bash` không chạy trên Ubuntu. Đã chuẩn hóa xuống dòng sang Linux trong Terraform, tạo lại VM và xác nhận startup script hoàn tất.
+- Việc người vận hành phải tự quản: Theo dõi state Terraform, log startup, container Docker, firewall, IP tĩnh và credit Free Trial.
+- Ghi chú: Triển khai thành công VPC/subnet, firewall HTTP và SSH qua IAP, IP tĩnh `34.142.242.95`, VM `ccapi-iaas-api` (e2-standard-2, Ubuntu 24.04, disk 20 GB), quyền pull Artifact Registry và ghi metrics. Các endpoint `/health`, `/items/item-000001` và `/compute?n=1000` trả HTTP 200. Container `ccapi` chạy với CPU=1000000000 và MEM=1073741824. Log container có timestamp, endpoint, status, handler_ms và git_sha. Cổng 80 hiện mở `0.0.0.0/0`; cần thu hẹp về IP của nhóm và máy load test trước khi benchmark chính thức.
+
 ---
 
 ## Mẫu đo "sửa lỗi → phát hành"
