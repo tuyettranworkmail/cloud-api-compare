@@ -93,3 +93,12 @@
 - Sự cố Git đã được khôi phục thông qua PR #4.
 
 **Trách nhiệm vận hành chính của Trân:** Quản lý hạ tầng dùng chung, cấu hình và triển khai IaaS, quản lý Terraform state, IAM, mạng, firewall, VM, container, giám sát tài nguyên và kiểm soát chi phí Google Cloud.
+
+## [2026-11-03] iaas — Build và push Docker image v1
+- Commit nguồn: `6247976d31006a491c9d32e2d405b12be32750d4` (short SHA: `6247976`).
+- Image URI: `asia-southeast1-docker.pkg.dev/ccapi-tran-2026/ccapi/ccapi:v1`.
+- Digest: `sha256:9f8b7d073766a294a0e3feab89a9eba81fbcd012afaf6ffad313f02a54d3a937`.
+- Kết quả: Build Docker image thành công; kiểm tra biến môi trường `GIT_SHA=6247976`, `PORT=8080`, `STORE=memory`; push image lên Artifact Registry thành công và xác minh tag `v1`.
+- Cấu hình IaaS cục bộ: cập nhật `git_sha = "6247976"` và `image_tag = "v1"` trong `infra/iaas/terraform.tfvars`; giữ nguyên `project_id` và `http_source_ranges`.
+- Việc người vận hành phải tự quản: Khởi động Docker Desktop, cấu hình xác thực Docker với Artifact Registry, build/tag/push image và xác minh digest trên Registry.
+- Ghi chú: Đây là bước chuẩn bị image và cấu hình cho phiên bản mới. Chưa chạy `terraform apply`, chưa cập nhật VM đang hoạt động và chưa xác nhận request thực tế từ image `v1`.
