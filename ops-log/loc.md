@@ -1,0 +1,48 @@
+# Nhật ký vận hành — Lộc
+
+**Đề tài:** So sánh thực nghiệm IaaS, PaaS và FaaS cho cùng một API  
+**Người thực hiện:** Lộc  
+**Phạm vi:** PaaS (Cloud Run) và FaaS (Cloud Run functions)  
+**Google Cloud Project:** `ccapi-tran-2026`  
+**Vùng triển khai:** `asia-southeast1`
+
+## 2026-11-02 — Triển khai thử nghiệm FaaS
+
+- Hoàn thiện và đóng gói mã nguồn FaaS thành `ccapi-faas-source.zip`.
+- Tạo bucket `ccapi-faas-source-loc-2026` và upload ZIP.
+- Khởi tạo Terraform backend, kiểm tra `terraform validate` và `terraform plan`.
+- Triển khai Cloud Run functions thành công bằng `terraform apply`.
+- Thời gian Terraform tạo Function: khoảng **1 phút 6 giây**.
+- Kiểm thử `GET /health`, `GET /compute`, `GET /items/{id}`: thành công.
+- Kiểm thử `POST /items`: lần đầu HTTP 201, gửi trùng HTTP 200.
+- Cấu hình: Python 3.12, 1 vCPU, 1 GiB RAM, min instances 0, max instances 10.
+
+**Ghi chú:** Đây là bản triển khai thử. Giá trị `GIT_SHA` đang là `dev`, cần đồng bộ theo phiên bản chính thức trước benchmark.
+
+## 2026-11-02 — Triển khai thử nghiệm PaaS
+
+- Build Docker image bằng `adapters/fastapi/Dockerfile`.
+- Kiểm thử container trên laptop: HTTP 200.
+- Upload image với tag `loc-temp-20261102` lên Artifact Registry.
+- Cấu hình và triển khai Cloud Run bằng Terraform.
+- Thời gian Terraform tạo dịch vụ: khoảng **22 giây**.
+- Kiểm thử `GET /health`, `GET /compute`, `GET /items/{id}`: thành công.
+- Kiểm thử `POST /items`: lần đầu HTTP 201, gửi trùng HTTP 200.
+- Cấu hình: 1 vCPU, 1 GiB RAM, min instances 0, max instances 10.
+
+**Ghi chú:** Image tạm chỉ phục vụ kiểm thử quy trình triển khai, chưa dùng benchmark chính thức.
+
+## 2026-11-03 — Đồng bộ nhóm
+
+- Cập nhật nhánh `main` lên commit `5031545`.
+- Xác nhận Terraform FaaS đã được merge thông qua PR #7.
+- Kiểm tra Artifact Registry: chưa thấy tag image chính thức trong danh sách.
+- Chờ image và Git SHA cuối của Trân để cập nhật PaaS và FaaS.
+
+## Việc cần hoàn thiện
+
+- Đồng bộ hai mô hình với phiên bản mã nguồn cuối.
+- Chạy contract test trên cả hai URL sau khi cập nhật.
+- Xác minh CPU, concurrency và gửi thông số cho Phúc Hoàng.
+- Ghi thời gian thực tế của quy trình sửa lỗi đến phát hành.
+- Lưu ảnh minh chứng và hoàn thiện nhật ký vận hành.
