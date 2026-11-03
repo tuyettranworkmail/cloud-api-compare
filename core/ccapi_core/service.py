@@ -9,7 +9,7 @@ CATEGORIES = [f"cat-{i:02d}" for i in range(10)]
 
 # Số vòng băm mặc định. Chạy scripts/calibrate_compute.py trên VM 1 vCPU
 # để chỉnh sao cho mất khoảng 50-100 ms, rồi ĐÓNG BĂNG giá trị này.
-DEFAULT_COMPUTE_ROUNDS = 200_000
+DEFAULT_COMPUTE_ROUNDS = 65_000
 MAX_COMPUTE_ROUNDS = 2_000_000
 
 SEED = 42
