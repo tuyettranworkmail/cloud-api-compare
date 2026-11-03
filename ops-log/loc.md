@@ -46,3 +46,13 @@
 - Xác minh CPU, concurrency và gửi thông số cho Phúc Hoàng.
 - Ghi thời gian thực tế của quy trình sửa lỗi đến phát hành.
 - Lưu ảnh minh chứng và hoàn thiện nhật ký vận hành.
+
+## 2026-11-03 — Triển khai phiên bản chính thức
+
+- **PaaS:** Cập nhật Docker image `v1`, Git SHA `6247976`. Terraform apply thành công trong 22 giây.
+- **FaaS:** Cập nhật ZIP mã nguồn và Git SHA `6247976`. Terraform apply thành công trong 1 phút 13 giây.
+- **Kiểm thử:** Cả hai API trả HTTP 200 tại `/health`, `/compute?n=1000` và `/items/item-000001`. Kết quả digest giống nhau.
+- **Cấu hình PaaS:** 1 vCPU, 1 GiB RAM, concurrency 80, min 0, max 10.
+- **Cấu hình FaaS:** 1 vCPU, 1 GiB RAM, concurrency 1, min 0, max 10.
+- **Bàn giao:** Đã gửi hai URL và thông số cấu hình cho Phúc Hoàng để thực hiện Contract Test và Pilot Test.
+- **Ghi chú:** API yêu cầu xác thực bằng Google Cloud identity token.
