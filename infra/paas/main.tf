@@ -30,9 +30,8 @@ variable "image_tag" {
 
 variable "git_sha" {
   type    = string
-  default = "dev"
+  default = "6247976"
 }
-
 provider "google" {
   project = var.project_id
   region  = var.region
