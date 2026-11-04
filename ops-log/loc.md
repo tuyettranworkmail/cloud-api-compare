@@ -54,5 +54,14 @@
 - **Kiểm thử:** Cả hai API trả HTTP 200 tại `/health`, `/compute?n=1000` và `/items/item-000001`. Kết quả digest giống nhau.
 - **Cấu hình PaaS:** 1 vCPU, 1 GiB RAM, concurrency 80, min 0, max 10.
 - **Cấu hình FaaS:** 1 vCPU, 1 GiB RAM, concurrency 1, min 0, max 10.
-- **Bàn giao:** Đã gửi hai URL và thông số cấu hình cho Phúc Hoàng để thực hiện Contract Test và Pilot Test.
+- **Bàn giao:** Đã gửi hai URL và thông số cấu hình cho Phuc để thực hiện Contract Test và Pilot Test.
 - **Ghi chú:** API yêu cầu xác thực bằng Google Cloud identity token.
+
+## 2026-11-04 — Xác minh cấu hình và chuẩn bị đo vận hành
+
+- Kiểm tra `terraform plan` cho PaaS và FaaS: cả hai đều báo `No changes`.
+- Lưu cấu hình triển khai thực tế vào hai file `paas-config.txt` và `faas-config.txt`.
+- Đối chiếu thời gian cập nhật phiên bản ngày 03/11: PaaS 22 giây; FaaS 73 giây.
+- Chưa đo đầy đủ thời gian từ sửa mã nguồn đến phát hành.
+- Chưa có kết quả xác nhận Contract Test và Pilot Test từ Phuc.
+- Giữ nguyên cấu hình để phục vụ các phép đo tiếp theo.
