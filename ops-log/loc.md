@@ -65,3 +65,26 @@
 - Chưa đo đầy đủ thời gian từ sửa mã nguồn đến phát hành.
 - Chưa có kết quả xác nhận Contract Test và Pilot Test từ Phuc.
 - Giữ nguyên cấu hình để phục vụ các phép đo tiếp theo.
+
+## 2026-11-05 — Đo vận hành PaaS và FaaS
+
+### PaaS
+
+- Docker build: 31,11 giây.
+- Docker push lên Artifact Registry: 13,76 giây.
+- Terraform apply cập nhật phiên bản ngày 03/11: 22 giây.
+
+### FaaS
+
+- Chuẩn bị mã nguồn và tạo ZIP: 3,95 giây.
+- Upload ZIP lên Cloud Storage: 15,41 giây.
+- Terraform apply cập nhật phiên bản ngày 03/11: 73 giây.
+
+### Ghi chú
+
+- Các bước đóng gói và tải lên được đo ngày 05/11.
+- Thời gian Terraform apply lấy từ lần triển khai thực tế ngày 03/11.
+- Chưa đo đầy đủ thời gian sửa mã nguồn đến phát hành.
+- PaaS có thể sử dụng cache Docker và các layer đã tồn tại trên Registry.
+- Chưa triển khai lại dịch vụ đang chạy để tránh ảnh hưởng benchmark.
+- Vẫn cần tổng kết số bước thao tác và công việc người vận hành phải tự quản lý.
