@@ -64,7 +64,7 @@ export function request(forcedEndpoint) {
   const sampleTags = Object.assign({}, tags, {
     request_id: requestId, status: String(response.status), success: String(ok),
     classification, instance_id: response.headers['X-Instance-Id'] || '',
-    handler_ms: response.headers['X-Handler-Duration-Ms'] || '',
+    handler_ms: response.headers['X-Handler-Ms'] || '',
     wall_ms: String(elapsed), error_code: String(response.error_code || ''),
     scenario_start_ms: String(exec.scenario.startTime),
   });

@@ -9,12 +9,12 @@ def make_client(config, monkeypatch, mismatch=False):
     def handler(request):
         path = request.url.path
         if path == "/openapi.json":
-            return httpx.Response(200, json={"paths": {ep["path"]: {ep["method"].lower(): {"responses": {"200": {}}}} for ep in config["targets"]["endpoints"].values()}})
-        if path.startswith("/api/items/"):
-            return httpx.Response(200, json={"id": path.split("/")[-1], "name": "seed", "value": 1})
-        if path == "/api/items":
-            return httpx.Response(201, json={"id": "generated"})
-        return httpx.Response(200, json={"result": 2 if mismatch and request.url.host.startswith("faas") else 1})
+            return httpx.Response(200, json={"paths": {ep.get("openapi_path", ep["path"]): {ep["method"].lower(): {"responses": {"200": {}}}} for ep in config["targets"]["endpoints"].values()}})
+        if path.startswith("/items/"):
+            return httpx.Response(200, json={"id": path.split("/")[-1], "name": "seed", "category": "cat-00", "value": 1, "payload": "x", "created_at": "2026-01-01T00:00:00Z"})
+        if path == "/items":
+            return httpx.Response(201, json={"id": "generated", "name": "benchmark", "category": "cat-00", "value": 42, "payload": "x", "created_at": "2026-01-01T00:00:00Z"})
+        return httpx.Response(200, json={"digest": "bad" if mismatch and request.url.host.startswith("faas") else "ok", "rounds": 65000})
     return httpx.Client(transport=httpx.MockTransport(handler))
 
 

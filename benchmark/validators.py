@@ -3,10 +3,12 @@ from __future__ import annotations
 
 import copy
 import uuid
+from pathlib import Path
 from typing import Any
 
 import httpx
 import jsonschema
+import yaml
 
 from benchmark.config import request_headers, target_config
 from benchmark.io import fingerprint, utcnow
@@ -47,14 +49,17 @@ def validate_contracts(c: dict, *, allow_writes: bool = False, client: httpx.Cli
                 report["errors"].append(f"{model}: URL chưa được cấu hình")
                 continue
             try:
-                r = client.get(target["url"] + c["targets"]["openapi_path"], headers=request_headers(c, model))
-                r.raise_for_status()
-                spec = r.json()
+                if c["targets"].get("openapi_file"):
+                    spec = yaml.safe_load(Path(c["targets"]["openapi_file"]).read_text(encoding="utf-8"))
+                else:
+                    r = client.get(target["url"] + c["targets"]["openapi_path"], headers=request_headers(c, model))
+                    r.raise_for_status()
+                    spec = r.json()
                 paths = spec["paths"]
                 # Exclude documentation differences while comparing all referenced component schemas.
                 selected = {}
                 for name, ep in c["targets"]["endpoints"].items():
-                    operation = paths[ep["path"]][ep["method"].lower()]
+                    operation = paths[ep.get("openapi_path", ep["path"])][ep["method"].lower()]
                     selected[name] = {k: operation.get(k) for k in ("requestBody", "responses", "parameters", "security")}
                 contracts[model] = normalize({"operations": selected, "schemas": spec.get("components", {}).get("schemas", {})}, ["description", "summary", "title", "example", "examples"])
                 model_report["contract_hash"] = fingerprint(contracts[model])

@@ -4,28 +4,32 @@ dataset_id: team-seed-v1
 read_ids: ["item-000001", "item-000002", "item-000003"]
 timeout_seconds: 30
 openapi_path: /openapi.json
+openapi_file: contracts/openapi.yaml
 headers: {}
 endpoints:
   read:
     method: GET
-    path: /api/items/{id}
+    path: /items/{id}
+    openapi_path: /items/{item_id}
     expected_status: [200]
     body: null
-    response_schema: {type: object, required: [id, name, value], properties: {id: {type: string}, name: {type: string}, value: {type: integer}}}
+    response_schema: {type: object, required: [id, name, category, value, payload, created_at], properties: {id: {type: string}, name: {type: string}, category: {type: string}, value: {type: integer}, payload: {type: string}, created_at: {type: string}}}
     ignore_fields: []
   write:
     method: POST
-    path: /api/items
+    path: /items
+    openapi_path: /items
     expected_status: [201]
-    body: {name: benchmark, value: 42, benchmark_run_id: "{run_id}", id: "{write_id}"}
-    response_schema: {type: object, required: [id], properties: {id: {type: string}}}
-    ignore_fields: [id]
+    body: {name: benchmark, category: cat-00, value: 42, payload: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
+    response_schema: {type: object, required: [id, name, category, value, payload, created_at], properties: {id: {type: string}}}
+    ignore_fields: [id, created_at]
   cpu:
-    method: POST
-    path: /api/cpu
+    method: GET
+    path: /compute?n=65000
+    openapi_path: /compute
     expected_status: [200]
-    body: {iterations: 10000}
-    response_schema: {type: object, required: [result], properties: {result: {type: integer}}}
+    body: null
+    response_schema: {type: object, required: [digest, rounds], properties: {digest: {type: string}, rounds: {type: integer}}}
     ignore_fields: []
 targets:
   iaas:
