@@ -102,3 +102,35 @@
 - Cấu hình IaaS cục bộ: cập nhật `git_sha = "6247976"` và `image_tag = "v1"` trong `infra/iaas/terraform.tfvars`; giữ nguyên `project_id` và `http_source_ranges`.
 - Việc người vận hành phải tự quản: Khởi động Docker Desktop, cấu hình xác thực Docker với Artifact Registry, build/tag/push image và xác minh digest trên Registry.
 - Ghi chú: Đây là bước chuẩn bị image và cấu hình cho phiên bản mới. Chưa chạy `terraform apply`, chưa cập nhật VM đang hoạt động và chưa xác nhận request thực tế từ image `v1`.
+
+## [2026-11-03] iaas — Phát hành image v1 lên VM
+- Commit nguồn: `6247976d31006a491c9d32e2d405b12be32750d4` (short SHA: `6247976`).
+- Thay đổi triển khai: Terraform thay thế VM `ccapi-iaas-api` để cập nhật `image_tag=v1` và `git_sha=6247976`; IP tĩnh `34.142.242.95`, VPC và firewall được giữ nguyên.
+- Kết quả: Startup script pull thành công `asia-southeast1-docker.pkg.dev/ccapi-tran-2026/ccapi/ccapi:v1`; container chạy với `CPU=1000000000`, `MEM=1073741824`.
+- Xác minh: Request đầu tiên tới `/health` lúc `2026-11-03T16:13:22.720Z` trả HTTP 200 và log ghi `git_sha=6247976`. `/items/item-000001` và `/compute?n=1000` cũng trả HTTP 200.
+- Việc người vận hành phải tự quản: Cập nhật `terraform.tfvars`, xem kỹ plan vì metadata startup script buộc thay thế VM, theo dõi startup script/Docker logs và kiểm tra lại endpoint sau phát hành.
+
+## [2026-11-03] iaas — Hoàn thiện kiểm soát truy cập và dữ liệu benchmark
+- Firewall HTTP: Đã thay `0.0.0.0/0` bằng `171.235.184.209/32`; endpoint `/health` vẫn trả HTTP 200 từ mạng được cấp quyền.
+- Dữ liệu đọc: Đã xác minh `/items/item-000001` và `/items/item-100000` đều trả HTTP 200, xác nhận hai mốc đầu/cuối của bộ seed dự kiến.
+- Lưu ý benchmark: Trước khi máy load test truy cập, cần bổ sung public IP của máy đó vào `http_source_ranges`; không mở lại Internet công khai.
+## [2026-11-07] chung — Sửa cấu hình benchmark cho khớp hợp đồng API thật (PR #17)
+- Số bước thao tác: 8 (curl thử 4 endpoint, sửa targets.yaml, validators.py, k6/common.js, test, commit, PR).
+- Thời gian thực tế (phút): <điền>
+- Lỗi gặp phải và cách xử lý: targets.yaml của bộ benchmark dùng đường dẫn mẫu /api/..., không khớp contracts/openapi.yaml; bộ kiểm tra tìm đường dẫn trong OpenAPI nên không khớp /items/{item_id}; bản FaaS (Flask) không có /openapi.json. Đã thêm openapi_path và openapi_file (dùng contracts/openapi.yaml làm hợp đồng chung), sửa tên header X-Handler-Duration-Ms thành X-Handler-Ms. pytest 71 passed.
+- Việc người vận hành phải tự quản: giữ cấu hình benchmark đồng bộ với hợp đồng API; kiểm tra IP máy khớp firewall (http_source_ranges) trước khi gọi VM.
+- Ghi chú: curl thử IaaS: /health, /items/item-000001, /compute?n=65000 trả 200 (handler 10,7 / 172,2 / 75,0 ms); POST /items trả 201.
+
+## [2026-11-07] iaas — Thu bằng chứng giới hạn container (PR feat/tran/iaas-evidence)
+- Số bước thao tác: 6 (lấy instance ID, thử SSH qua IAP, sửa script, chạy script, kiểm tra docker top, điền targets.yaml).
+- Thời gian thực tế (phút): <điền>
+- Lỗi gặp phải và cách xử lý: script gốc không có --tunnel-through-iap trong khi firewall SSH chỉ mở cho dải IAP nên thêm tham số --iap; thêm sudo cho docker inspect; trên Windows subprocess không tìm thấy gcloud nên dùng shutil.which (lỗi WinError 2); test_fairness fail vì đã có file bằng chứng thật, đã xóa runtime_evidence_file trong test kịch bản không có bằng chứng.
+- Việc người vận hành phải tự quản: SSH qua IAP và khóa SSH của gcloud; thu lại bằng chứng mỗi khi VM bị thay (instance ID đổi).
+- Ghi chú: VM ccapi-iaas-api (instance ID 4901182592617265517, asia-southeast1-b, e2-standard-2); container ccapi có CPU 1.0 và RAM 1073741824 byte; docker top chỉ có một tiến trình uvicorn --workers 1.
+
+## [2026-11-07] chung — Xác minh dữ liệu seed Firestore
+- Số bước thao tác: 4 (cài google-cloud-firestore, đăng nhập ADC, chạy script đếm, đối chiếu mẫu).
+- Thời gian thực tế (phút): <điền>
+- Lỗi gặp phải và cách xử lý: không có.
+- Việc người vận hành phải tự quản: tính toàn vẹn dữ liệu seed, credentials ADC, dọn collection items_write sau khi đo.
+- Ghi chú: collection items có 100000 document; 22/22 document kiểm tra (item-000001, item-100000 và 20 ID ngẫu nhiên, random seed 1) khớp dữ liệu sinh lại từ seed 42; items_write hiện có 5 bản ghi test.
