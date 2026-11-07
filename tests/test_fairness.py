@@ -13,6 +13,7 @@ def test_evidence_checks_instance_id_and_actual_limits(tmp_path):
 
 
 def test_controlled_cannot_claim_equivalence_without_evidence(config):
+    config["targets"]["targets"]["iaas"]["runtime_evidence_file"] = ""  # test kịch bản chưa có bằng chứng, bất kể cấu hình thật
     snap = {"iaas": {"instance_id": "123"}, "paas": {"containers": [{"resources": {"limits": {"cpu": "1", "memory": "1Gi"}}}], "concurrency": 10}, "faas": {"containers": [{"resources": {"limits": {"cpu": "1", "memory": "1Gi"}}}], "concurrency": 80}}
     result = fairness_report(config, snap)
     assert not result["controlled_limits_verified"]

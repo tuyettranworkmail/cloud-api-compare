@@ -5,6 +5,7 @@ Does not create, restart, resize or delete resources. gcloud SSH must already wo
 import argparse
 import json
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -16,12 +17,16 @@ def main():
     for field in ("project", "zone", "vm", "container", "instance-id"):
         parser.add_argument("--" + field, required=True)
     parser.add_argument("--output", type=Path, default=Path("results/iaas_container_evidence.json"))
+    parser.add_argument("--iap", action="store_true", help="SSH qua IAP tunnel")
     args = parser.parse_args()
     for value in (args.project, args.zone, args.vm, args.container, args.instance_id):
         if not re.fullmatch(r"[a-zA-Z0-9_.-]+", value):
             raise ValueError("Identifier không hợp lệ")
-    command = "docker inspect --format '{{json .HostConfig}}' " + args.container
-    result = subprocess.run(["gcloud", "compute", "ssh", args.vm, "--project", args.project, "--zone", args.zone, "--command", command, "--quiet"], check=True, capture_output=True, text=True)
+    command = "sudo docker inspect --format '{{json .HostConfig}}' " + args.container
+    ssh = [shutil.which("gcloud") or "gcloud", "compute", "ssh", args.vm, "--project", args.project, "--zone", args.zone]
+    if args.iap:
+        ssh.append("--tunnel-through-iap")
+    result = subprocess.run(ssh + ["--command", command, "--quiet"], check=True, capture_output=True, text=True)
     host = json.loads(result.stdout)
     nano, quota, period = host.get("NanoCpus", 0), host.get("CpuQuota", 0), host.get("CpuPeriod", 0)
     limit = nano / 1e9 if nano else quota / period if quota > 0 and period > 0 else None

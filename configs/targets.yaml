@@ -36,10 +36,10 @@ targets:
     url_env: IAAS_URL
     token_env: IAAS_TOKEN
     project_env: GCP_PROJECT_ID
-    instance_name: ""
+    instance_name: "ccapi-iaas-api"
     zone: asia-southeast1-b
-    instance_id: ""
-    runtime_evidence_file: ""
+    instance_id: "4901182592617265517"
+    runtime_evidence_file: "results/iaas_container_evidence.json"
     service: ""
     runtime: python312
     declared: {vm_type: e2-standard-2, vm_vcpu: 2, vm_memory_gib: 8, app_vcpu: 1, app_memory_gib: 1, workers: 1, concurrency: null, min_instances: 1, max_instances: 1, billing_mode: vm, gateway: none}
