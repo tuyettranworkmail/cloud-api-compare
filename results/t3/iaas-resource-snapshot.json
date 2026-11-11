@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-11-11T18:24:00.554276+00:00",
+  "instance_id": "4901182592617265517",
+  "machine_type": "https://www.googleapis.com/compute/v1/projects/ccapi-tran-2026/zones/asia-southeast1-b/machineTypes/e2-standard-2",
+  "vm_vcpu": 2,
+  "vm_memory_mib": 8192,
+  "status": "RUNNING",
+  "app_limits": "VERIFY_WITH_DOCKER_INSPECT",
+  "declared": {
+    "vm_type": "e2-standard-2",
+    "vm_vcpu": 2,
+    "vm_memory_gib": 8,
+    "app_vcpu": 1,
+    "app_memory_gib": 1,
+    "workers": 1,
+    "concurrency": null,
+    "min_instances": 1,
+    "max_instances": 1,
+    "billing_mode": "vm",
+    "gateway": "none"
+  }
+}

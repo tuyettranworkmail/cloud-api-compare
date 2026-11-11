@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-11-11T19:00:41.279192+00:00",
+  "passed": false,
+  "models": {
+    "faas": {
+      "checks": [],
+      "timeout_seconds": 30,
+      "auth": "none"
+    }
+  },
+  "errors": [
+    "faas: HTTPStatusError: contract/status/schema check failed"
+  ],
+  "scope": {
+    "models": [
+      "faas"
+    ],
+    "runtime_endpoints": [
+      "read",
+      "cpu"
+    ],
+    "writes_executed": false,
+    "equivalence_checked": false
+  }
+}

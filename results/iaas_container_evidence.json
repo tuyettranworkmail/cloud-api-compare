@@ -1,11 +1,14 @@
 {
-  "verified_at": "2026-11-11T16:23:16.343771+00:00",
-  "instance_id": "9105753187953524203",
+  "verified_at": "2026-11-11T18:27:03.751528+00:00",
+  "instance_id": "4901182592617265517",
   "container": "ccapi",
+  "container_id": "6f632a1e3c05b699ce39cdd4cea41c2f6c8694a0a69a3a1c312cb065b217900d",
   "cpu_limit": 1.0,
+  "nano_cpus": 1000000000,
   "memory_bytes": 1073741824,
   "memory_swap_bytes": 1073741824,
   "memory_limit_gib": 1.0,
-  "source": "read-only sudo docker inspect over gcloud compute ssh via IAP",
-  "worker_count": "verify application worker configuration separately"
+  "worker_count": 1,
+  "command": "uvicorn app:app --host 0.0.0.0 --port ${PORT} --workers 1",
+  "source": "read-only sudo docker inspect over gcloud compute ssh via IAP"
 }
