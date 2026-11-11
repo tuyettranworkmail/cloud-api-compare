@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-11-11T16:23:16.343771+00:00",
+  "instance_id": "9105753187953524203",
+  "container": "ccapi",
+  "cpu_limit": 1.0,
+  "memory_bytes": 1073741824,
+  "memory_swap_bytes": 1073741824,
+  "memory_limit_gib": 1.0,
+  "source": "read-only sudo docker inspect over gcloud compute ssh via IAP",
+  "worker_count": "verify application worker configuration separately"
+}

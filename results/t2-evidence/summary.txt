@@ -1,0 +1,8 @@
+T2 IaaS API Smoke Test
+Verified at UTC: Wed Nov 11 16:33:37 UTC 2026
+Loadgen: benchmark-loadgen.asia-southeast1-b.c.ccapi-tran-2026.internal
+Target: http://10.10.0.4
+HEALTH: HTTP 200
+OPENAPI: HTTP 200
+READ: HTTP 200
+COMPUTE: HTTP 200
