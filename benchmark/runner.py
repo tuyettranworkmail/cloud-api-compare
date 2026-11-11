@@ -82,6 +82,17 @@ def plan_experiments(c: dict, scenarios=None, models=None, levels=None, repeats=
     return runs
 
 
+def plan_uses_writes(c: dict, plans: list[dict]) -> bool:
+    """Return True if any planned run can issue a POST request."""
+    for params in plans:
+        endpoint = params.get("endpoint")
+        if endpoint == "write":
+            return True
+        if endpoint is None and float(c["workloads"]["mix"].get("write", 0)) > 0:
+            return True
+    return False
+
+
 def spending_bound(c: dict, params: dict) -> float:
     safety = c["experiments"]["safety"]
     request_price = safety["verified_upper_usd_per_request"]
@@ -147,11 +158,30 @@ def execute_plan(c: dict, plans: list[dict], output: Path = Path("results"), *, 
             policies.append(str(error))
         return {"dry_run": True, "runs": plans, "request_bound": sum(p["request_bound"] for p in plans), "upper_cost_usd": total, "budget_usd": c["experiments"]["safety"]["budget_usd"], "policy_notes": policies, "cloud_contacted": False}
     safety = c["experiments"]["safety"]
-    if not safety["quota_verified"] or not safety["allow_benchmark_writes"]:
-        raise ConfigError("Phải xác minh quota và cho phép ghi benchmark trong cấu hình")
+    if not plans:
+        raise ConfigError("Kh?ng c? experiment n?o trong k? ho?ch")
+
+    selected_models = sorted({params["model"] for params in plans})
+    if not selected_models:
+        raise ConfigError("Kh?ng x?c ??nh ???c target trong k? ho?ch")
+
+    if not safety["quota_verified"]:
+        raise ConfigError("Quota is not verified; REAL execution is blocked")
+
+    if plan_uses_writes(c, plans):
+        if not safety["allow_benchmark_writes"]:
+            raise ConfigError("Workload includes POST but allow_benchmark_writes is disabled")
+        raise ConfigError(
+            "POST benchmark is locked: K6 Idempotency-Key is not implemented "
+            "and safe HTTP 200/201 handling is not verified"
+        )
+
     binary = k6_binary()
     generator = generator_preflight(c)
-    config_hash = fingerprint({"config": c, "targets": {m: target_config(c, m) for m in c["targets"]["targets"]}})
+    config_hash = fingerprint({
+        "config": c,
+        "targets": {model: target_config(c, model) for model in selected_models},
+    })
     with experiment_lock(output):
         ledger_path = output / "budget_ledger.json"
         ledger = read_json(ledger_path) if ledger_path.exists() else {"reserved_upper_usd": 0.0, "reserved_requests": 0, "attempts": []}
@@ -186,23 +216,55 @@ def execute_plan(c: dict, plans: list[dict], output: Path = Path("results"), *, 
             meta = {**params, "data_mode": "REAL", "config_hash": config_hash, "status": "RUNNING", "started_at": utcnow(), "generator": generator, "config": redact(c), "warnings": [], "files": {}}
             write_json(directory / "metadata.json", meta)
             try:
-                validation = validate_contracts(c, allow_writes=True)
+                endpoint = params.get("endpoint")
+                validation_endpoints = (
+                    [endpoint] if endpoint in {"read", "cpu"}
+                    else ["read", "cpu"]
+                )
+                validation = validate_contracts(
+                    c,
+                    models=[params["model"]],
+                    endpoints=validation_endpoints,
+                )
                 write_json(directory / "compatibility.json", validation)
                 if not validation["passed"]:
                     raise ConfigError("Compatibility thất bại; xem compatibility.json")
                 if safety["require_resource_snapshot"]:
                     from benchmark.fairness import fairness_report
-                    snapshots = {model: resource_snapshot(c, model) for model in ("iaas", "paas", "faas")}
+                    snapshots = {
+                        model: resource_snapshot(c, model)
+                        for model in selected_models
+                    }
                     meta["resource_snapshot"] = snapshots[params["model"]]
                     meta["all_resource_snapshots"] = snapshots
-                    fairness = fairness_report(c, snapshots)
-                    write_json(directory / "fairness.json", fairness)
-                    if c["experiments"]["comparison_mode"] == "controlled" and not fairness["controlled_limits_verified"]:
-                        raise ConfigError("Controlled resource verification thất bại; xem fairness.json hoặc chọn deployment mode để nghiên cứu cấu hình thực tế")
+                    meta["resource_snapshot_scope"] = selected_models
+
+                    if len(selected_models) == 3:
+                        fairness = fairness_report(c, snapshots)
+                        write_json(directory / "fairness.json", fairness)
+                        if (
+                            c["experiments"]["comparison_mode"] == "controlled"
+                            and not fairness["controlled_limits_verified"]
+                        ):
+                            raise ConfigError(
+                                "Controlled resource verification th?t b?i; xem fairness.json"
+                            )
+                    else:
+                        fairness = {
+                            "status": "NOT_ASSESSED_SINGLE_TARGET",
+                            "controlled_limits_verified": False,
+                            "selected_models": selected_models,
+                            "reason": (
+                                "C?n ?? IaaS, PaaS v? FaaS ?? x?c minh "
+                                "controlled comparison"
+                            ),
+                        }
+                        write_json(directory / "fairness.json", fairness)
+
                     if params["model"] == "iaas":
                         configured_id = target_config(c, "iaas")["instance_id"]
                         if configured_id != meta["resource_snapshot"]["instance_id"]:
-                            raise ConfigError("instance_id cấu hình không khớp VM thực")
+                            raise ConfigError("instance_id c?u h?nh kh?ng kh?p VM th?c")
                 meta["versions"] = {name: importlib.metadata.version(name) for name in ("numpy", "pandas", "scipy", "httpx", "google-cloud-monitoring")}
                 meta["k6_version"] = subprocess.check_output([binary, "version"], text=True).strip()
                 sha = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=ROOT)

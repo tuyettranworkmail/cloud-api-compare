@@ -2,7 +2,7 @@
 import pytest
 
 from benchmark.config import ConfigError, redact, validate_config
-from benchmark.runner import execute_plan, plan_experiments, spending_bound
+from benchmark.runner import execute_plan, plan_experiments, plan_uses_writes, spending_bound
 
 
 def test_plan_is_reproducible_randomized_and_sequential(config):
@@ -50,3 +50,28 @@ def test_idle_plan_does_not_require_running_k6_during_idle(config):
     p = plan_experiments(config, scenarios=["idle"], models=["faas"], repeats=1)[0]
     assert p["idle_seconds"] == 1200
     assert p["offered_requests"] == 21
+
+def test_read_only_endpoint_does_not_require_write_permission(config):
+    plans = plan_experiments(
+        config, models=["iaas"], endpoint="read", repeats=1
+    )
+    assert not plan_uses_writes(config, plans)
+
+
+def test_cpu_endpoint_does_not_require_write_permission(config):
+    plans = plan_experiments(
+        config, models=["iaas"], endpoint="cpu", repeats=1
+    )
+    assert not plan_uses_writes(config, plans)
+
+
+def test_mixed_workload_requires_write_permission(config):
+    plans = plan_experiments(config, models=["iaas"], repeats=1)
+    assert plan_uses_writes(config, plans)
+
+
+def test_write_endpoint_requires_write_permission(config):
+    plans = plan_experiments(
+        config, models=["iaas"], endpoint="write", repeats=1
+    )
+    assert plan_uses_writes(config, plans)

@@ -21,6 +21,7 @@ def main(argv=None) -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     validate = sub.add_parser("validate", help="Validate local config and optionally live contracts")
     validate.add_argument("--live", action="store_true")
+    validate.add_argument("--target", choices=["iaas", "paas", "faas"])
     validate.add_argument("--output", type=Path, default=Path("results/compatibility.json"))
     for name in ("run", "run-all"):
         run = sub.add_parser(name)
@@ -69,7 +70,8 @@ def main(argv=None) -> int:
         if args.command == "validate":
             if args.live:
                 from benchmark.validators import validate_contracts
-                result = validate_contracts(c, allow_writes=c["experiments"]["safety"]["allow_benchmark_writes"])
+                selected_models = [args.target] if args.target else c["targets"]["targets"]
+                result = validate_contracts(c, models=selected_models)
                 write_json(args.output, result)
                 if not result["passed"]:
                     print(json.dumps(result, ensure_ascii=False, indent=2))
