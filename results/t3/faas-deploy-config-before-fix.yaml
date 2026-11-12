@@ -1,0 +1,46 @@
+﻿buildConfig:
+  automaticUpdatePolicy: {}
+  build: projects/681966362324/locations/asia-southeast1/builds/81302f30-bff4-4607-ab7d-8e64a4f0600d
+  dockerRegistry: ARTIFACT_REGISTRY
+  dockerRepository: projects/ccapi-tran-2026/locations/asia-southeast1/repositories/gcf-artifacts
+  entryPoint: ccapi
+  runtime: python312
+  serviceAccount: projects/ccapi-tran-2026/serviceAccounts/681966362324-compute@developer.gserviceaccount.com
+  source:
+    storageSource:
+      bucket: gcf-v2-sources-681966362324-asia-southeast1
+      generation: '1793722893950227'
+      object: ccapi-faas/function-source.zip
+  sourceProvenance:
+    resolvedStorageSource:
+      bucket: gcf-v2-sources-681966362324-asia-southeast1
+      generation: '1793722893950227'
+      object: ccapi-faas/function-source.zip
+createTime: '2026-11-02T13:12:25.674054523Z'
+description: CCAPI FaaS - Cloud Run functions
+environment: GEN_2
+labels:
+  goog-terraform-provisioned: 'true'
+name: projects/ccapi-tran-2026/locations/asia-southeast1/functions/ccapi-faas
+satisfiesPzi: true
+satisfiesPzs: true
+serviceConfig:
+  allTrafficOnLatestRevision: true
+  availableCpu: '1'
+  availableMemory: 1Gi
+  environmentVariables:
+    GIT_SHA: '6247976'
+    LOG_EXECUTION_ID: 'true'
+    MODEL: faas
+    STORE: firestore
+  ingressSettings: ALLOW_ALL
+  maxInstanceCount: 10
+  maxInstanceRequestConcurrency: 1
+  revision: ccapi-faas-00002-pak
+  service: projects/ccapi-tran-2026/locations/asia-southeast1/services/ccapi-faas
+  serviceAccountEmail: ccapi-api@ccapi-tran-2026.iam.gserviceaccount.com
+  timeoutSeconds: 60
+  uri: https://ccapi-faas-anwil42nhq-as.a.run.app
+state: ACTIVE
+updateTime: '2026-11-03T16:22:34.654700834Z'
+url: https://asia-southeast1-ccapi-tran-2026.cloudfunctions.net/ccapi-faas

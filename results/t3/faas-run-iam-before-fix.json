@@ -1,0 +1,12 @@
+﻿{
+  "bindings": [
+    {
+      "members": [
+        "serviceAccount:ccapi-benchmark-invoker@ccapi-tran-2026.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.invoker"
+    }
+  ],
+  "etag": "BwZgFJgajWw=",
+  "version": 1
+}

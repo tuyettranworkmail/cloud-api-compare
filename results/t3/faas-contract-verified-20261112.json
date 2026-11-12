@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-11-12T15:49:55.953679+00:00",
+  "passed": true,
+  "models": {
+    "faas": {
+      "checks": [
+        {
+          "endpoint": "read",
+          "method": "GET",
+          "passed": true,
+          "trials": 3
+        },
+        {
+          "endpoint": "cpu",
+          "method": "GET",
+          "passed": true,
+          "trials": 2
+        }
+      ],
+      "timeout_seconds": 30,
+      "auth": "bearer_env",
+      "contract_hash": "7e491088e96952e85ac228f2e1e5e4faaf8e39fae49f82cf62b2fa37eb291f17"
+    }
+  },
+  "errors": [],
+  "scope": {
+    "models": [
+      "faas"
+    ],
+    "runtime_endpoints": [
+      "read",
+      "cpu"
+    ],
+    "writes_executed": false,
+    "equivalence_checked": false
+  }
+}
