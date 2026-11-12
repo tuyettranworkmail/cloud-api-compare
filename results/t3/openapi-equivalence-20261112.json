@@ -1,0 +1,35 @@
+{
+  "verified_at_utc": "2026-11-12T16:32:11.962913+00:00",
+  "scope": "live OpenAPI structural comparison",
+  "sources": {
+    "paas": {
+      "file": "results\\t3\\paas-openapi-live-verified-20261112.json",
+      "sha256": "fa3f7d20a10989eb5f4ed3c32c43860dff73e0a39f6a91e500c4de0f8a73bf27"
+    },
+    "faas": {
+      "file": "results\\t3\\faas-openapi-live-verified-20261112.json",
+      "sha256": "f58119699c26decee3f199365221c87bf56affe64ff67a8a1d6bd50a51c2b48a"
+    }
+  },
+  "checks": {
+    "openapi_version_equal": true,
+    "info_equal": true,
+    "paths_equal_ignoring_descriptions": true,
+    "schemas_equal": true,
+    "entire_document_equal_ignoring_descriptions": true,
+    "post_items_operation_id_equal": true,
+    "post_items_parameters_equal": true,
+    "post_items_request_body_equal": true,
+    "post_items_security_equal": true,
+    "post_items_response_status_codes_equal": true,
+    "post_items_response_schemas_equal": true,
+    "post_items_200_description_equal": false
+  },
+  "limitations": [
+    "Description text is excluded from structural equivalence.",
+    "POST runtime behavior and idempotency have not been tested.",
+    "Data-level equivalence has not been established.",
+    "FaaS POST /items response 200 description contains mojibake."
+  ],
+  "verdict": "STRUCTURAL_EQUIVALENCE_PASS_EXCLUDING_DESCRIPTIONS"
+}
