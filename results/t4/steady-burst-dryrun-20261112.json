@@ -1,0 +1,563 @@
+﻿{
+    "evidence_type":  "T4 execution-plan dry-run",
+    "generated_at_utc":  "2026-11-12T16:23:06.7916389Z",
+    "total_plans":  12,
+    "cloud_workload_executed":  false,
+    "plans":  [
+                  {
+                      "scenario":  "steady",
+                      "level":  "low",
+                      "model":  "iaas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "low",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  5,
+                                                      "offered_requests":  1125,
+                                                      "max_rps":  5,
+                                                      "request_bound":  1147,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "iaas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-iaas-steady-low-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  1147,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "medium",
+                      "model":  "iaas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "medium",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  20,
+                                                      "offered_requests":  4500,
+                                                      "max_rps":  20,
+                                                      "request_bound":  4522,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "iaas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-iaas-steady-medium-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  4522,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "high",
+                      "model":  "iaas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "high",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  50,
+                                                      "offered_requests":  11250,
+                                                      "max_rps":  50,
+                                                      "request_bound":  11272,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "iaas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-iaas-steady-high-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  11272,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "burst",
+                      "level":  "burst",
+                      "model":  "iaas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "warmup_seconds":  45,
+                                                      "baseline_rps":  10,
+                                                      "peak_rps":  100,
+                                                      "baseline_seconds":  60,
+                                                      "ramp_seconds":  2,
+                                                      "hold_seconds":  60,
+                                                      "recovery_seconds":  60,
+                                                      "scenario":  "burst",
+                                                      "load_level":  "burst",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  10,
+                                                      "measurement_seconds":  184,
+                                                      "offered_requests":  7870,
+                                                      "max_rps":  100,
+                                                      "request_bound":  7892,
+                                                      "wall_bound_seconds":  789,
+                                                      "model":  "iaas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-iaas-burst-burst-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  7892,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "low",
+                      "model":  "paas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "low",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  5,
+                                                      "offered_requests":  1125,
+                                                      "max_rps":  5,
+                                                      "request_bound":  1147,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "paas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-paas-steady-low-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  1147,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "medium",
+                      "model":  "paas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "medium",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  20,
+                                                      "offered_requests":  4500,
+                                                      "max_rps":  20,
+                                                      "request_bound":  4522,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "paas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-paas-steady-medium-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  4522,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "high",
+                      "model":  "paas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "high",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  50,
+                                                      "offered_requests":  11250,
+                                                      "max_rps":  50,
+                                                      "request_bound":  11272,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "paas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-paas-steady-high-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  11272,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "burst",
+                      "level":  "burst",
+                      "model":  "paas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "warmup_seconds":  45,
+                                                      "baseline_rps":  10,
+                                                      "peak_rps":  100,
+                                                      "baseline_seconds":  60,
+                                                      "ramp_seconds":  2,
+                                                      "hold_seconds":  60,
+                                                      "recovery_seconds":  60,
+                                                      "scenario":  "burst",
+                                                      "load_level":  "burst",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  10,
+                                                      "measurement_seconds":  184,
+                                                      "offered_requests":  7870,
+                                                      "max_rps":  100,
+                                                      "request_bound":  7892,
+                                                      "wall_bound_seconds":  789,
+                                                      "model":  "paas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-paas-burst-burst-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  7892,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "low",
+                      "model":  "faas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "low",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  5,
+                                                      "offered_requests":  1125,
+                                                      "max_rps":  5,
+                                                      "request_bound":  1147,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "faas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-faas-steady-low-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  1147,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "medium",
+                      "model":  "faas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "medium",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  20,
+                                                      "offered_requests":  4500,
+                                                      "max_rps":  20,
+                                                      "request_bound":  4522,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "faas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-faas-steady-medium-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  4522,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "steady",
+                      "level":  "high",
+                      "model":  "faas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "rates":  {
+                                                                    "low":  5,
+                                                                    "medium":  20,
+                                                                    "high":  50
+                                                                },
+                                                      "warmup_seconds":  45,
+                                                      "measurement_seconds":  180,
+                                                      "scenario":  "steady",
+                                                      "load_level":  "high",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  50,
+                                                      "offered_requests":  11250,
+                                                      "max_rps":  50,
+                                                      "request_bound":  11272,
+                                                      "wall_bound_seconds":  785,
+                                                      "model":  "faas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-faas-steady-high-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  11272,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  },
+                  {
+                      "scenario":  "burst",
+                      "level":  "burst",
+                      "model":  "faas",
+                      "result":  {
+                                     "dry_run":  true,
+                                     "runs":  [
+                                                  {
+                                                      "warmup_seconds":  45,
+                                                      "baseline_rps":  10,
+                                                      "peak_rps":  100,
+                                                      "baseline_seconds":  60,
+                                                      "ramp_seconds":  2,
+                                                      "hold_seconds":  60,
+                                                      "recovery_seconds":  60,
+                                                      "scenario":  "burst",
+                                                      "load_level":  "burst",
+                                                      "endpoint":  "read",
+                                                      "mix":  {
+                                                                  "read":  0.7,
+                                                                  "write":  0.2,
+                                                                  "cpu":  0.1
+                                                              },
+                                                      "preallocated_vus":  30,
+                                                      "max_vus":  200,
+                                                      "graceful_stop_seconds":  35,
+                                                      "rate":  10,
+                                                      "measurement_seconds":  184,
+                                                      "offered_requests":  7870,
+                                                      "max_rps":  100,
+                                                      "request_bound":  7892,
+                                                      "wall_bound_seconds":  789,
+                                                      "model":  "faas",
+                                                      "repeat":  1,
+                                                      "seed":  20261031,
+                                                      "run_id":  "phuc-hoang-v1-faas-burst-burst-read-r01"
+                                                  }
+                                              ],
+                                     "request_bound":  7892,
+                                     "upper_cost_usd":  null,
+                                     "budget_usd":  10,
+                                     "policy_notes":  [
+                                                          "Thiß║┐u trß║ºn chi ph├¡ ─æ├ú kiß╗âm chß╗⌐ng/request v├á /hour; kh├┤ng ─æ╞░ß╗úc chß║íy REAL"
+                                                      ],
+                                     "cloud_contacted":  false
+                                 }
+                  }
+              ]
+}
