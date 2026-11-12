@@ -77,7 +77,11 @@ def plan_experiments(c: dict, scenarios=None, models=None, levels=None, repeats=
                 for model in order:
                     params = scenario_parameters(c, scenario, level, endpoint)
                     params.update(model=model, repeat=repeat + 1, seed=c["experiments"]["seed"] + repeat)
-                    params["run_id"] = f'{c["experiments"]["experiment_id"]}-{model}-{scenario}-{level}-{endpoint or "mixed"}-r{repeat + 1:02}'
+                    if scenario == "idle":
+                        run_label = f'{scenario}-{params["idle_seconds"]}s'
+                    else:
+                        run_label = f'{scenario}-{level}'
+                    params["run_id"] = f'{c["experiments"]["experiment_id"]}-{model}-{run_label}-{endpoint or "mixed"}-r{repeat + 1:02}'
                     runs.append(params)
     return runs
 
