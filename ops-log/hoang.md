@@ -1,4 +1,4 @@
-﻿# Nhật ký vận hành — Phúc Hoàng
+# Nhật ký vận hành — Phúc Hoàng
 
 **Đề tài:** So sánh thực nghiệm IaaS, PaaS và FaaS cho cùng một API  
 **Người thực hiện:** Phúc Hoàng  
@@ -120,4 +120,75 @@
 - Nội dung: `test(t3): verify IaaS PaaS FaaS contracts and evidence`
 - Trạng thái: Đã commit trên nhánh `feat/phuc-hoang/benchmark`, chưa push tại thời điểm ghi nhật ký.
 
+
+
+## 2026-11-15 — T4: Chuẩn bị và kiểm chứng benchmark
+
+### 1. Điều chỉnh workload
+- Cập nhật `configs/workloads.yaml` để giảm tải và hạn chế chi phí thử nghiệm.
+- Steady workload: 1, 2, 3 RPS.
+- Burst workload: baseline 1 RPS, peak 3 RPS.
+- Idle workload: 60 giây.
+- Preallocated VUs: 5; maximum VUs: 10.
+- Cập nhật `configs/experiments.yaml` với giới hạn ngân sách 10 USD, tối đa 5.000 requests và 10 RPS.
+
+### 2. Dry-run
+- Chạy lệnh:
+  `python -m benchmark.cli run-all --endpoint read --repeats 1 --dry-run`
+- Kế hoạch gồm 15 runs cho 3 mô hình và 3 kịch bản.
+- Request bound: 744.
+- Maximum planned RPS: 3.
+- Dry-run hoàn thành, không gửi request đến cloud.
+- Đây là kiểm tra cấu hình, không phải kết quả benchmark thực tế.
+
+### 3. Kiểm tra quota và Monitoring
+- Kiểm tra Compute Engine quota toàn vùng:
+  - Limit: 16 CPUs.
+  - Usage: 4 CPUs.
+  - Remaining: 12 CPUs.
+- Kiểm tra Cloud Run service quotas.
+- Xác nhận Monitoring API đã được bật.
+- Lưu ý: quota đọc/ghi API quản lý Cloud Run không đại diện cho HTTP runtime RPS.
+- Chưa đủ bằng chứng để đặt `quota_verified=true`.
+
+### 4. Kiểm tra Billing và giá dịch vụ
+- Xác định Service ID của Compute Engine, Cloud Run, Cloud Run Functions và Cloud Firestore.
+- Gọi thành công Billing Account Price API.
+- Tra cứu SKU IPv4 `C054-7F72-A02E`.
+- API trả về thông tin giá theo VND và mức giảm giá tài khoản bằng 0 cho SKU đã kiểm tra.
+- Tiếp tục truy xuất SKU Compute Engine theo phân trang để tìm đúng SKU vùng `asia-southeast1`.
+- Chưa hoàn tất đối chiếu giá tài khoản cho toàn bộ dịch vụ.
+- Các giá trong pricing catalog chưa được xem là trần chi phí đã xác minh.
+
+### 5. Kiểm tra điều kiện chạy REAL
+- Kiểm tra safety guard trong `benchmark/runner.py`.
+- Runner yêu cầu `verified_upper_usd_per_request` và `verified_upper_usd_per_hour` phải có giá trị hợp lệ.
+- Hiện hai giới hạn này chưa được xác minh.
+- `quota_verified` vẫn là `false`.
+- Dry-run ghi nhận thiếu trần chi phí đã kiểm chứng nên không cho phép chạy REAL.
+- Không vô hiệu hóa safety guard hoặc tự đặt giá trị chi phí giả định.
+
+### 6. Hạ tầng IaaS
+- Xác nhận VM `ccapi-iaas-api` đang RUNNING.
+- Machine type: `e2-standard-2`.
+- Zone: `asia-southeast1-b`.
+- Cấu hình: 2 vCPU, 8 GB RAM.
+
+### Kết luận T4 tại ngày 15/11
+- Workload và dry-run: PASS.
+- Kiểm tra Billing API: PASS đối với SKU IPv4 đã tra cứu.
+- Xác minh đầy đủ chi phí: NOT VERIFIED.
+- Xác minh quota để chạy REAL: NOT VERIFIED.
+- REAL benchmark: NOT EXECUTED.
+- Chưa có kết quả thực nghiệm để so sánh hiệu năng và chi phí IaaS/PaaS/FaaS.
+
+## 2026-11-15 — T4: Rà soát backup và dọn dẹp
+
+- Kiểm kê các file backup và snapshot trong repository.
+- So sánh hash giữa 7 bản backup mã nguồn/cấu hình với file hiện tại.
+- Kết quả: cả 7 bản đều khác file hiện tại, không xóa để bảo toàn khả năng rollback.
+- Xóa `.env.before-url-fix.bak` vì đây là bản môi trường cũ, có thể chứa thông tin nhạy cảm.
+- Giữ nguyên `.env` hiện tại.
+- Không xóa dữ liệu trong `results/`, `reports/`, `configs/` hoặc các bằng chứng T4.
+- Chưa thực hiện REAL benchmark; các điều kiện xác minh chi phí và quota vẫn đang được xử lý.
 
