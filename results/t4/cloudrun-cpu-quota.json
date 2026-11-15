@@ -1,0 +1,492 @@
+﻿{
+  "containerType": "PROJECT",
+  "dimensions": [
+    "region"
+  ],
+  "dimensionsInfos": [
+    {
+      "applicableLocations": [
+        "africa-south1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "africa-south1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-east1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-east1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-east2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-east2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-northeast1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-northeast1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-northeast2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-northeast2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-northeast3"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-northeast3"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-south1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-south1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-south2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-south2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-southeast1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-southeast1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-southeast2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-southeast2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "asia-southeast3"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "asia-southeast3"
+      }
+    },
+    {
+      "applicableLocations": [
+        "australia-southeast1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "australia-southeast1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "australia-southeast2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "australia-southeast2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-central2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-central2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-north1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-north1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-north2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-north2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-southwest1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-southwest1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west10"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west10"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west12"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west12"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west3"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west3"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west4"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west4"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west6"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west6"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west8"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west8"
+      }
+    },
+    {
+      "applicableLocations": [
+        "europe-west9"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "europe-west9"
+      }
+    },
+    {
+      "applicableLocations": [
+        "me-central1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "me-central1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "me-central2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "me-central2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "me-west1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "me-west1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "northamerica-northeast1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "northamerica-northeast1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "northamerica-northeast2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "northamerica-northeast2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "northamerica-south1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "northamerica-south1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "southamerica-east1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "southamerica-east1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "southamerica-west1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "southamerica-west1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-central1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-central1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-east1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-east1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-east4"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-east4"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-east5"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-east5"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-south1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-south1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-west1"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-west1"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-west2"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-west2"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-west3"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-west3"
+      }
+    },
+    {
+      "applicableLocations": [
+        "us-west4"
+      ],
+      "details": {
+        "value": "56000"
+      },
+      "dimensions": {
+        "region": "us-west4"
+      }
+    }
+  ],
+  "metric": "run.googleapis.com/cpu_allocation",
+  "metricDisplayName": "Total CPU allocation",
+  "metricUnit": "1",
+  "name": "projects/681966362324/locations/global/services/run.googleapis.com/quotaInfos/CpuAllocPerProjectRegion",
+  "quotaDisplayName": "Total CPU allocation, in milli vCPU, per project per region",
+  "quotaId": "CpuAllocPerProjectRegion",
+  "quotaIncreaseEligibility": {
+    "isEligible": true
+  },
+  "refreshInterval": "minute",
+  "service": "run.googleapis.com"
+}

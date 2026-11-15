@@ -8,15 +8,24 @@ from benchmark.cost import PriceMissingError, find_intersections
 def test_vm_full_host_cost_not_container_fraction(cost_model):
     result = cost_model.estimate("iaas", 0)
     assert result["compute_usd"] == pytest.approx(730 * .08266614)
-    assert result["breakdown"]["disk"] == pytest.approx(10 * .044)
+    assert result["breakdown"]["disk"] == pytest.approx(20 * .044)
     assert result["cost_per_million_usd"] is None
     assert result["capacity_status"] == "UNVERIFIED"
 
 
-def test_faas_gen2_same_cost_as_paas_when_same_config(cost_model):
-    for n in (0, 100000, 2000000, 20000000):
-        assert cost_model.estimate("paas", n)["total_usd"] == cost_model.estimate("faas", n)["total_usd"]
+def test_faas_gen2_same_cost_as_paas_when_same_billing_config(cost_model):
+    paas = cost_model.workload["models"]["paas"]
+    faas = cost_model.workload["models"]["faas"]
 
+    original_mode = faas["billing_mode"]
+    try:
+        faas["billing_mode"] = paas["billing_mode"]
+        for n in (0, 100000, 2000000, 20000000):
+            assert cost_model.estimate("paas", n)["total_usd"] == pytest.approx(
+                cost_model.estimate("faas", n)["total_usd"]
+            )
+    finally:
+        faas["billing_mode"] = original_mode
 
 def test_missing_selected_price_errors_not_zero(cost_model):
     cost_model.catalog["rates"]["vm_hour"]["unit_price"] = None
@@ -42,15 +51,28 @@ def test_free_tier_requires_eligibility(cost_model):
         cost_model.estimate("paas", 100)
 
 
-def test_free_tier_tier2_monetary_credit(cost_model):
+def test_free_tier_request_billing_tier2_monetary_credit(cost_model):
     a = cost_model.workload["assumptions"]
-    a.update(free_tier=True, free_tier_eligible=True, firestore_free_eligible=True)
-    cost_model.workload["models"]["paas"].update(measured_active_instance_seconds=200000, min_instances=0)
+    a.update(
+        free_tier=True,
+        free_tier_eligible=True,
+        firestore_free_eligible=True,
+    )
+
+    model = cost_model.workload["models"]["paas"]
+    model.update(
+        billing_mode="request",
+        measured_active_instance_seconds=200000,
+        min_instances=0,
+    )
+
     result = cost_model.estimate("paas", 1000)
-    assert result["breakdown"]["compute_cpu"] == pytest.approx(200000 * .0000336 - 4.32)
+
+    assert result["breakdown"]["compute_cpu"] == pytest.approx(
+        max(0, 200000 * .0000336 - 4.32)
+    )
     assert result["breakdown"]["requests"] == 0
     assert result["breakdown"]["firestore_read"] == 0
-
 
 def test_firestore_daily_quota_not_monthly_pool(cost_model):
     a = cost_model.workload["assumptions"]

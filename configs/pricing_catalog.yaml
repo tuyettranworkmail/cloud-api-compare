@@ -24,7 +24,7 @@ rates:
   firestore_delete: {service: Firestore, sku: Document delete Singapore Standard, sku_id: null, unit: operation, unit_price: 0.000000123, source: 'https://cloud.google.com/firestore/pricing'}
   firestore_storage: {service: Firestore, sku: Stored data Singapore Standard, sku_id: null, unit: GiB-month, unit_price: 0.1846, source: 'https://cloud.google.com/firestore/pricing'}
   disk_gib_month: {service: Compute Engine, sku: Standard zonal persistent disk Singapore, sku_id: null, unit: GiB-month, unit_price: 0.044, source: 'https://cloud.google.com/compute/disks-image-pricing'}
-  ipv4_hour: {service: VPC, sku: In-use external IPv4 standard VM, sku_id: null, unit: IP-hour, unit_price: null, source: 'https://cloud.google.com/vpc/network-pricing'}
+  ipv4_hour: {service: VPC, sku: In-use external IPv4 standard VM, sku_id: C054-7F72-A02E, unit: IP-hour, unit_price: 0.005, source: 'https://cloud.google.com/vpc/network-pricing'}
   egress_gib: {service: Network, sku: User selected destination and route, sku_id: null, unit: GiB, unit_price: null, source: 'https://cloud.google.com/vpc/network-pricing'}
   logging_gib: {service: Observability, sku: Logging storage ingestion, sku_id: null, unit: GiB, unit_price: null, source: 'https://cloud.google.com/stackdriver/pricing'}
   monitoring_mib: {service: Observability, sku: User selected billable metrics, sku_id: null, unit: MiB, unit_price: null, source: 'https://cloud.google.com/stackdriver/pricing'}

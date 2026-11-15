@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-11-14T14:00:26.089967+00:00",
+  "passed": false,
+  "models": {
+    "iaas": {
+      "checks": [],
+      "timeout_seconds": 30,
+      "auth": "none"
+    },
+    "paas": {
+      "checks": [],
+      "timeout_seconds": 30,
+      "auth": "none"
+    },
+    "faas": {
+      "checks": [],
+      "timeout_seconds": 30,
+      "auth": "none"
+    }
+  },
+  "errors": [
+    "iaas: ConnectTimeout: contract/status/schema check failed",
+    "paas: HTTPStatusError: contract/status/schema check failed",
+    "faas: HTTPStatusError: contract/status/schema check failed",
+    "OpenAPI: equivalence across all three deployments not verified",
+    "read-only payload: equivalence across all three deployments not verified"
+  ],
+  "scope": {
+    "models": [
+      "iaas",
+      "paas",
+      "faas"
+    ],
+    "runtime_endpoints": [
+      "read",
+      "cpu"
+    ],
+    "writes_executed": false,
+    "equivalence_checked": true
+  }
+}

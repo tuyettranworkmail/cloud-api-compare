@@ -1,0 +1,28 @@
+{
+  "comparison_mode": "controlled",
+  "controlled_limits_verified": true,
+  "limits": {
+    "iaas": {
+      "cpu": 1.0,
+      "memory_gib": 1.0
+    },
+    "paas": {
+      "cpu": 1.0,
+      "memory_gib": 1.0
+    },
+    "faas": {
+      "cpu": 1.0,
+      "memory_gib": 1.0
+    }
+  },
+  "concurrency": {
+    "paas": 1,
+    "faas": 1
+  },
+  "issues": [],
+  "remaining_confounders": [
+    "Worker count and app startup flags require team verification",
+    "Underlying hardware/scheduler differ across services",
+    "VM billed capacity remains full host; app limits do not equal billing allocation"
+  ]
+}

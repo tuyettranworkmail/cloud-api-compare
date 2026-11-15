@@ -39,16 +39,18 @@ function substitute(value, replacements) {
 
 export function request(forcedEndpoint) {
   const iteration = exec.scenario.iterationInTest;
-  const r = uniform(iteration);
-  const endpoint =
-    forcedEndpoint ||
-    cfg.endpoint ||
-    (r < cfg.mix.read
-      ? "read"
-      : r < cfg.mix.read + cfg.mix.write
-        ? "write"
-        : "cpu");
+  // Fail closed: never fall back to the mixed workload.
+  const endpoint = forcedEndpoint || cfg.endpoint;
+  if (!endpoint) {
+    throw new Error("Missing explicit endpoint; refusing mixed workload fallback");
+  }
   const ep = cfg.endpoints[endpoint];
+  if (!ep) {
+    throw new Error(`Unknown endpoint: ${endpoint}`);
+  }
+  if (endpoint === "read" && ep.method !== "GET") {
+    throw new Error(`READ-only safety violation: expected GET, got ${ep.method}`);
+  }
   const phase =
     cfg.scenario === "idle"
       ? iteration === 0

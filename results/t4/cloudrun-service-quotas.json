@@ -1,0 +1,2082 @@
+﻿[
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/active_revisions",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "4000",
+            "effectiveLimit": "4000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "Active Revisions",
+    "metric": "run.googleapis.com/active_revisions"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/ai_studio_custom_urls",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1000",
+            "effectiveLimit": "1000"
+          }
+        ],
+        "unit": "1/{project}"
+      }
+    ],
+    "displayName": "Ai Studio Custom URLs",
+    "metric": "run.googleapis.com/ai_studio_custom_urls"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/cpu_allocation",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "56000",
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "africa-south1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-east1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-east2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-northeast1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-northeast2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-northeast3"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-south1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-south2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-southeast1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-southeast2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "asia-southeast3"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "australia-southeast1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "australia-southeast2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-central2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-north1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-north2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-southwest1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west10"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west12"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west3"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west4"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west6"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west8"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "europe-west9"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "me-central1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "me-central2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "me-west1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "northamerica-northeast1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "northamerica-northeast2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "northamerica-south1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "southamerica-east1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "southamerica-west1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-central1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-east1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-east4"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-east5"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-south1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-west1"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-west2"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-west3"
+            },
+            "effectiveLimit": "56000"
+          },
+          {
+            "defaultLimit": "56000",
+            "dimensions": {
+              "region": "us-west4"
+            },
+            "effectiveLimit": "56000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Total CPU allocation",
+    "metric": "run.googleapis.com/cpu_allocation",
+    "unit": "1"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/custom_urls",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "5",
+            "effectiveLimit": "5"
+          }
+        ],
+        "unit": "1/{project}"
+      }
+    ],
+    "displayName": "Custom URLs",
+    "metric": "run.googleapis.com/custom_urls"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/ephemeral_disk_allocation",
+        "quotaBuckets": [
+          {}
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Total Ephemeral Disk allocation",
+    "metric": "run.googleapis.com/ephemeral_disk_allocation",
+    "unit": "By"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/inlined_source_deploy",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "5",
+            "effectiveLimit": "5"
+          }
+        ],
+        "unit": "1/min/{project}"
+      }
+    ],
+    "displayName": "Deployment requests using inlined source code",
+    "metric": "run.googleapis.com/inlined_source_deploy"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/inlined_source_deploy_regional",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "5",
+            "effectiveLimit": "5"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Deployment requests using inlined source code",
+    "metric": "run.googleapis.com/inlined_source_deploy_regional"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/instance_limit_with_direct_vpc_egress_regional",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "100",
+            "effectiveLimit": "100"
+          },
+          {
+            "defaultLimit": "200",
+            "dimensions": {
+              "region": "europe-west1"
+            },
+            "effectiveLimit": "200"
+          },
+          {
+            "defaultLimit": "200",
+            "dimensions": {
+              "region": "us-central1"
+            },
+            "effectiveLimit": "200"
+          },
+          {
+            "defaultLimit": "200",
+            "dimensions": {
+              "region": "us-east1"
+            },
+            "effectiveLimit": "200"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "Instance limit with Direct VPC egress",
+    "metric": "run.googleapis.com/instance_limit_with_direct_vpc_egress_regional"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/instances",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "100",
+            "effectiveLimit": "100"
+          },
+          {
+            "dimensions": {
+              "region": "europe-west1"
+            }
+          },
+          {
+            "dimensions": {
+              "region": "us-central1"
+            }
+          },
+          {
+            "dimensions": {
+              "region": "us-east1"
+            }
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "Instances",
+    "metric": "run.googleapis.com/instances"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/jobs",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1000",
+            "effectiveLimit": "1000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "Jobs",
+    "metric": "run.googleapis.com/jobs"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/max_per_instance_ephemeral_disk",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "10737418240",
+            "effectiveLimit": "10737418240"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Maximum per-instance Ephemeral Disk allocation",
+    "metric": "run.googleapis.com/max_per_instance_ephemeral_disk",
+    "unit": "By"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/max_regions",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "5",
+            "effectiveLimit": "5"
+          }
+        ],
+        "unit": "1/{project}"
+      }
+    ],
+    "displayName": "Number of regions that Cloud Run has been used in",
+    "metric": "run.googleapis.com/max_regions"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/mem_allocation",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "120259084288",
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "africa-south1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-east1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-east2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-northeast1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-northeast2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-northeast3"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-south1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-south2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-southeast1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-southeast2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "asia-southeast3"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "australia-southeast1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "australia-southeast2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-central2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-north1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-north2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-southwest1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west10"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west12"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west3"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west4"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west6"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west8"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "europe-west9"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "me-central1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "me-central2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "me-west1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "northamerica-northeast1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "northamerica-northeast2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "northamerica-south1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "southamerica-east1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "southamerica-west1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-central1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-east1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-east4"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-east5"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-south1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-west1"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-west2"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-west3"
+            },
+            "effectiveLimit": "120259084288"
+          },
+          {
+            "defaultLimit": "120259084288",
+            "dimensions": {
+              "region": "us-west4"
+            },
+            "effectiveLimit": "120259084288"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Total memory allocation",
+    "metric": "run.googleapis.com/mem_allocation",
+    "unit": "By"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/nvidia_l4_gpu_allocation",
+        "quotaBuckets": [
+          {}
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Total Nvidia L4 GPU allocation with zonal redundancy",
+    "metric": "run.googleapis.com/nvidia_l4_gpu_allocation",
+    "unit": "1"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/nvidia_l4_gpu_allocation_no_zonal_redundancy",
+        "quotaBuckets": [
+          {}
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Total Nvidia L4 GPU allocation without zonal redundancy",
+    "metric": "run.googleapis.com/nvidia_l4_gpu_allocation_no_zonal_redundancy",
+    "unit": "1"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/nvidia_rtx_pro_6000_gpu_allocation",
+        "quotaBuckets": [
+          {}
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Total Nvidia RTX Pro 6000 GPU allocation with zonal redundancy",
+    "metric": "run.googleapis.com/nvidia_rtx_pro_6000_gpu_allocation",
+    "unit": "1"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/nvidia_rtx_pro_6000_gpu_allocation_no_zonal_redundancy",
+        "quotaBuckets": [
+          {}
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Total Nvidia RTX Pro 6000 GPU allocation without zonal redundancy",
+    "metric": "run.googleapis.com/nvidia_rtx_pro_6000_gpu_allocation_no_zonal_redundancy",
+    "unit": "1"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/read_regional",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1200",
+            "effectiveLimit": "1200"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Read requests",
+    "metric": "run.googleapis.com/read_regional"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/run_job_regional",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "60",
+            "effectiveLimit": "60"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Job run requests",
+    "metric": "run.googleapis.com/run_job_regional"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/running_executions",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1000",
+            "effectiveLimit": "1000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "RunningExecutions",
+    "metric": "run.googleapis.com/running_executions"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/services",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1000",
+            "effectiveLimit": "1000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "Services",
+    "metric": "run.googleapis.com/services"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/source_deploy_bytes",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1000000000",
+            "effectiveLimit": "1000000000"
+          }
+        ],
+        "unit": "1/min/{project}"
+      }
+    ],
+    "displayName": "Global source code bytes deployed through the API",
+    "metric": "run.googleapis.com/source_deploy_bytes"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/source_deploy_bytes_regional",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1000000000",
+            "effectiveLimit": "1000000000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Source code bytes deployed through the API per region",
+    "metric": "run.googleapis.com/source_deploy_bytes_regional"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/source_upload",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "20",
+            "effectiveLimit": "20"
+          }
+        ],
+        "unit": "1/min/{project}"
+      }
+    ],
+    "displayName": "Upload source requests",
+    "metric": "run.googleapis.com/source_upload"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/source_upload_regional",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "20",
+            "effectiveLimit": "20"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Upload source requests",
+    "metric": "run.googleapis.com/source_upload_regional"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/tags",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "2000",
+            "effectiveLimit": "2000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "Tags",
+    "metric": "run.googleapis.com/tags"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "isPrecise": true,
+        "metric": "run.googleapis.com/worker-pools",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "1000",
+            "effectiveLimit": "1000"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/{project}/{region}"
+      }
+    ],
+    "displayName": "WorkerPools",
+    "metric": "run.googleapis.com/worker-pools"
+  },
+  {
+    "consumerQuotaLimits": [
+      {
+        "metric": "run.googleapis.com/write_regional",
+        "quotaBuckets": [
+          {
+            "defaultLimit": "60",
+            "effectiveLimit": "60"
+          }
+        ],
+        "supportedLocations": [
+          "africa-south1",
+          "asia-east1",
+          "asia-east2",
+          "asia-northeast1",
+          "asia-northeast2",
+          "asia-northeast3",
+          "asia-south1",
+          "asia-south2",
+          "asia-southeast1",
+          "asia-southeast2",
+          "asia-southeast3",
+          "australia-southeast1",
+          "australia-southeast2",
+          "europe-central2",
+          "europe-north1",
+          "europe-north2",
+          "europe-southwest1",
+          "europe-west1",
+          "europe-west10",
+          "europe-west12",
+          "europe-west2",
+          "europe-west3",
+          "europe-west4",
+          "europe-west6",
+          "europe-west8",
+          "europe-west9",
+          "me-central1",
+          "me-central2",
+          "me-west1",
+          "northamerica-northeast1",
+          "northamerica-northeast2",
+          "northamerica-south1",
+          "southamerica-east1",
+          "southamerica-west1",
+          "us-central1",
+          "us-east1",
+          "us-east4",
+          "us-east5",
+          "us-south1",
+          "us-west1",
+          "us-west2",
+          "us-west3",
+          "us-west4"
+        ],
+        "unit": "1/min/{project}/{region}"
+      }
+    ],
+    "displayName": "Write requests",
+    "metric": "run.googleapis.com/write_regional"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-11-14T13:59:01.764682+00:00",
+  "passed": false,
+  "models": {
+    "iaas": {
+      "checks": [],
+      "timeout_seconds": 30,
+      "auth": "none"
+    },
+    "paas": {
+      "checks": [],
+      "timeout_seconds": 30,
+      "auth": "none"
+    },
+    "faas": {
+      "checks": [],
+      "timeout_seconds": 30,
+      "auth": "none"
+    }
+  },
+  "errors": [
+    "iaas: URL chưa được cấu hình",
+    "paas: URL chưa được cấu hình",
+    "faas: URL chưa được cấu hình",
+    "OpenAPI: chưa xác minh tương đương giữa ba deployment",
+    "payload/CPU: chưa xác minh tương đương giữa ba deployment"
+  ],
+  "scope": "all read_ids; two deterministic CPU trials; schema and normalized write response"
+}

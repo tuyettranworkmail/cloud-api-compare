@@ -1,0 +1,106 @@
+{
+  "iaas": {
+    "verified_at": "2026-11-13T07:19:52.271293+00:00",
+    "instance_id": "4901182592617265517",
+    "machine_type": "https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/asia-southeast1-b/machineTypes/e2-standard-2",
+    "vm_vcpu": 2,
+    "vm_memory_mib": 8192,
+    "status": "RUNNING",
+    "app_limits": "VERIFY_WITH_DOCKER_INSPECT",
+    "declared": {
+      "vm_type": "e2-standard-2",
+      "vm_vcpu": 2,
+      "vm_memory_gib": 8,
+      "app_vcpu": 1,
+      "app_memory_gib": 1,
+      "workers": 1,
+      "concurrency": null,
+      "min_instances": 1,
+      "max_instances": 1,
+      "billing_mode": "vm",
+      "gateway": "none"
+    }
+  },
+  "paas": {
+    "verified_at": "2026-11-13T07:19:53.891832+00:00",
+    "service": "ccapi-paas",
+    "generation": "4",
+    "latest_ready_revision": "projects/[PROJECT_ID]/locations/asia-southeast1/services/ccapi-paas/revisions/ccapi-paas-00004-c2c",
+    "scaling": {
+      "maxInstanceCount": 3
+    },
+    "service_scaling": {
+      "maxInstanceCount": 10
+    },
+    "concurrency": 1,
+    "timeout": "300s",
+    "containers": [
+      {
+        "image": "asia-southeast1-docker.pkg.dev/[PROJECT_ID]/ccapi/ccapi:v1",
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "1Gi"
+          }
+        }
+      }
+    ],
+    "runtime": "python312",
+    "function_service_config": null,
+    "declared": {
+      "app_vcpu": 1,
+      "app_memory_gib": 1,
+      "workers": 1,
+      "concurrency": null,
+      "min_instances": 0,
+      "max_instances": 3,
+      "billing_mode": "request",
+      "gateway": "none"
+    }
+  },
+  "faas": {
+    "verified_at": "2026-11-13T07:19:55.792449+00:00",
+    "service": "ccapi-faas",
+    "generation": "4",
+    "latest_ready_revision": "projects/[PROJECT_ID]/locations/asia-southeast1/services/ccapi-faas/revisions/ccapi-faas-00004-dts",
+    "scaling": {
+      "maxInstanceCount": 3
+    },
+    "service_scaling": {
+      "maxInstanceCount": 10
+    },
+    "concurrency": 1,
+    "timeout": "60s",
+    "containers": [
+      {
+        "image": "asia-southeast1-docker.pkg.dev/[PROJECT_ID]/gcf-artifacts/ccapi--tran--2026__asia--southeast1__ccapi--faas:version_1",
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "1Gi"
+          },
+          "cpuIdle": true,
+          "startupCpuBoost": true
+        }
+      }
+    ],
+    "runtime": "python312",
+    "function_service_config": {
+      "timeoutSeconds": 60,
+      "maxInstanceCount": 3,
+      "availableMemory": "1Gi",
+      "maxInstanceRequestConcurrency": 1,
+      "availableCpu": "1"
+    },
+    "declared": {
+      "app_vcpu": 1,
+      "app_memory_gib": 1,
+      "workers": 1,
+      "concurrency": null,
+      "min_instances": 0,
+      "max_instances": 3,
+      "billing_mode": "request",
+      "gateway": "none"
+    }
+  }
+}

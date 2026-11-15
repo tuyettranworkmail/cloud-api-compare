@@ -92,30 +92,30 @@ targets:
     url_env: PAAS_URL
     token_env: PAAS_TOKEN
     project_env: GCP_PROJECT_ID
-    service: 'ccapi-paas'
+    service: ccapi-paas
     runtime: python312
     declared:
       app_vcpu: 1
       app_memory_gib: 1
       workers: 1
-      concurrency: null
+      concurrency: 1
       min_instances: 0
-      max_instances: 10
-      billing_mode: request
+      max_instances: 3
+      billing_mode: instance
       gateway: none
   faas:
     url_env: FAAS_URL
     token_env: FAAS_TOKEN
     project_env: GCP_PROJECT_ID
-    service: 'ccapi-faas'
-    function_name: 'ccapi-faas'
+    service: ccapi-faas
+    function_name: ccapi-faas
     runtime: python312
     declared:
       app_vcpu: 1
       app_memory_gib: 1
       workers: 1
-      concurrency: null
+      concurrency: 1
       min_instances: 0
-      max_instances: 10
+      max_instances: 3
       billing_mode: request
       gateway: none

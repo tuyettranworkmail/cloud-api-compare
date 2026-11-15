@@ -8,7 +8,7 @@ from benchmark.runner import execute_plan, plan_experiments, plan_uses_writes, s
 def test_plan_is_reproducible_randomized_and_sequential(config):
     first = plan_experiments(config)
     assert first == plan_experiments(config)
-    assert len(first) == 75
+    assert len(first) == 15
     for i in range(0, len(first), 3):
         assert {p["model"] for p in first[i:i+3]} == {"iaas", "paas", "faas"}
     orders = {tuple(p["model"] for p in first[i:i+3]) for i in range(0, len(first), 3)}
@@ -48,8 +48,8 @@ def test_redaction_recursive():
 
 def test_idle_plan_does_not_require_running_k6_during_idle(config):
     p = plan_experiments(config, scenarios=["idle"], models=["faas"], repeats=1)[0]
-    assert p["idle_seconds"] == 1200
-    assert p["offered_requests"] == 21
+    assert p["idle_seconds"] == 60
+    assert p["offered_requests"] == 6
 
 def test_read_only_endpoint_does_not_require_write_permission(config):
     plans = plan_experiments(

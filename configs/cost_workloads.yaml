@@ -1,5 +1,5 @@
 data_mode: DEMO
-label: 'SIMULATED DATA – NOT REAL CLOUD MEASUREMENTS'
+label: 'SIMULATED DATA - NOT REAL CLOUD MEASUREMENTS'
 traffic_levels: {low: 100000, medium: 2000000, high: 20000000}
 assumptions:
   mix: {read: 0.7, write: 0.2, cpu: 0.1}
@@ -21,8 +21,8 @@ assumptions:
   firestore_storage_gib: 1
   firestore_network_usd: 0
   firestore_optional_usd: 0
-  disk_gib: 10
-  external_ipv4_count: 0
+  disk_gib: 20
+  external_ipv4_count: 1
   logging_gib: 0
   monitoring_mib: 0
   artifact_gib: 0
@@ -39,5 +39,5 @@ assumptions:
   free_tier_scope: mutually_exclusive_alternatives
 models:
   iaas: {billing_mode: vm, vm_count: 1, capacity_rps: null, labor_hours: 0}
-  paas: {billing_mode: request, vcpu: 1, memory_gib: 1, concurrency: 10, min_instances: 0, max_instances: 10, target_cpu_utilization: 0.6, startup_count: 50, startup_seconds: 1, shutdown_seconds: 0, scale_down_tail_seconds: 900, labor_hours: 0, measured_active_instance_seconds: null, measured_lifetime_instance_seconds: null}
-  faas: {billing_mode: request, vcpu: 1, memory_gib: 1, concurrency: 10, min_instances: 0, max_instances: 10, target_cpu_utilization: 0.6, startup_count: 50, startup_seconds: 1, shutdown_seconds: 0, scale_down_tail_seconds: 900, labor_hours: 0, measured_active_instance_seconds: null, measured_lifetime_instance_seconds: null}
+  paas: {billing_mode: instance, vcpu: 1, memory_gib: 1, concurrency: 1, min_instances: 0, max_instances: 3, target_cpu_utilization: 0.6, startup_count: 50, startup_seconds: 1, shutdown_seconds: 0, scale_down_tail_seconds: 900, labor_hours: 0, measured_active_instance_seconds: null, measured_lifetime_instance_seconds: null}
+  faas: {billing_mode: request, vcpu: 1, memory_gib: 1, concurrency: 1, min_instances: 0, max_instances: 3, target_cpu_utilization: 0.6, startup_count: 50, startup_seconds: 1, shutdown_seconds: 0, scale_down_tail_seconds: 900, labor_hours: 0, measured_active_instance_seconds: null, measured_lifetime_instance_seconds: null}
