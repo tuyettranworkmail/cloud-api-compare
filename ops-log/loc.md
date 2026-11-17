@@ -106,3 +106,27 @@
 - Thời gian handler không đại diện cho toàn bộ thời gian Cold Start.
 - Chưa có đủ dữ liệu Burst Test để xác định thời gian scale-out.
 - Không thay đổi cấu hình hoặc triển khai lại dịch vụ trong quá trình kiểm tra.
+
+## 2026-11-08 — Cập nhật repository và rà soát tiến độ
+
+- Kiểm tra trạng thái Git, chuyển về nhánh `main` và cập nhật mã nguồn mới nhất từ nhóm.
+- Tiếp tục đối chiếu nội dung báo cáo PaaS/FaaS với công việc đã triển khai.
+- Chưa xuất được số liệu chi phí và mức sử dụng thực tế từ Google Cloud Billing.
+
+## 2026-11-09 đến 2026-11-11 — Chuẩn bị báo cáo và minh chứng
+
+- Đối chiếu bản báo cáo nhóm 38 trang; xác nhận các phần đã có bản nháp: mục 2.2, 4.3, 4.4 và 6.1–6.3.
+- Phát hiện các điểm cần chỉnh: tiêu đề mục 4.4 bị thừa dấu chấm, số hiệu các bảng trong mục 6.2 chưa thống nhất, một số vị trí ảnh minh chứng chưa được chèn.
+- Chuẩn bị đoạn bổ sung về Cold Start cho mục 4.3.5 và 4.4.6, dựa trên log PaaS/FaaS đã kiểm tra ngày 06/11.
+- Soạn nội dung đóng góp Chương 7 từ góc nhìn trách nhiệm vận hành và chuẩn bị phụ lục ảnh Cloud Run/Cloud Logging đã có.
+- Chưa xác nhận đã tích hợp hoặc bàn giao đầy đủ các tài liệu này vào bản báo cáo cuối của nhóm.
+
+## 2026-11-17 — Cập nhật nhật ký và công việc tồn đọng
+
+- Rà soát nhật ký trên GitHub và bổ sung các mốc công việc sau ngày 06/11 để nhóm theo dõi.
+- Chưa có dữ liệu đủ rõ về thời điểm tăng tải và số instance để tính thời gian scale-out trong Burst Test.
+- Chưa hoàn tất phép đo toàn trình từ sửa mã nguồn đến phát hành; các số liệu từng công đoạn đã được ghi trong nhật ký ngày 05/11.
+- Chưa xác nhận kết quả kiểm tra tái lập kịch bản k6 của Phúc Hoàng, số liệu chi phí thực tế, bộ ảnh minh chứng đầy đủ và trạng thái bàn giao báo cáo/slide.
+- Các ngày không có minh chứng thực hiện công việc mới được để trống, không tự suy diễn đã hoàn thành.
+
+**Việc cần ưu tiên tiếp theo:** Xác nhận bản báo cáo/slide đã được nhóm nhận, bổ sung minh chứng còn thiếu, sau đó kiểm tra tình trạng benchmark và chi phí cùng các thành viên phụ trách.
