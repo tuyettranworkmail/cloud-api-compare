@@ -37,15 +37,7 @@
 - Cập nhật nhánh `main` lên commit `5031545`.
 - Xác nhận Terraform FaaS đã được merge thông qua PR #7.
 - Kiểm tra Artifact Registry: chưa thấy tag image chính thức trong danh sách.
-- Chờ image và Git SHA cuối của Trân để cập nhật PaaS và FaaS.
-
-## Việc cần hoàn thiện
-
-- Đồng bộ hai mô hình với phiên bản mã nguồn cuối.
-- Chạy contract test trên cả hai URL sau khi cập nhật.
-- Xác minh CPU, concurrency và gửi thông số cho Phúc Hoàng.
-- Ghi thời gian thực tế của quy trình sửa lỗi đến phát hành.
-- Lưu ảnh minh chứng và hoàn thiện nhật ký vận hành.
+- Chờ phiên bản image chính thức để cập nhật PaaS và FaaS.
 
 ## 2026-11-03 — Triển khai phiên bản chính thức
 
@@ -54,7 +46,7 @@
 - **Kiểm thử:** Cả hai API trả HTTP 200 tại `/health`, `/compute?n=1000` và `/items/item-000001`. Kết quả digest giống nhau.
 - **Cấu hình PaaS:** 1 vCPU, 1 GiB RAM, concurrency 80, min 0, max 10.
 - **Cấu hình FaaS:** 1 vCPU, 1 GiB RAM, concurrency 1, min 0, max 10.
-- **Bàn giao:** Đã gửi hai URL và thông số cấu hình cho Phuc để thực hiện Contract Test và Pilot Test.
+- **Bàn giao:** Đã gửi URL và thông số cấu hình của hai dịch vụ để phục vụ kiểm thử.
 - **Ghi chú:** API yêu cầu xác thực bằng Google Cloud identity token.
 
 ## 2026-11-04 — Xác minh cấu hình và chuẩn bị đo vận hành
@@ -63,7 +55,7 @@
 - Lưu cấu hình triển khai thực tế vào hai file `paas-config.txt` và `faas-config.txt`.
 - Đối chiếu thời gian cập nhật phiên bản ngày 03/11: PaaS 22 giây; FaaS 73 giây.
 - Chưa đo đầy đủ thời gian từ sửa mã nguồn đến phát hành.
-- Chưa có kết quả xác nhận Contract Test và Pilot Test từ Phuc.
+- Chưa xác nhận được kết quả Contract Test và Pilot Test.
 - Giữ nguyên cấu hình để phục vụ các phép đo tiếp theo.
 
 ## 2026-11-05 — Đo vận hành PaaS và FaaS
@@ -87,7 +79,7 @@
 - Chưa đo đầy đủ thời gian sửa mã nguồn đến phát hành.
 - PaaS có thể sử dụng cache Docker và các layer đã tồn tại trên Registry.
 - Chưa triển khai lại dịch vụ đang chạy để tránh ảnh hưởng benchmark.
-- Vẫn cần tổng kết số bước thao tác và công việc người vận hành phải tự quản lý.
+- Cần tổng hợp lại các bước triển khai và công việc vận hành.
 
 ## 2026-11-06 — Theo dõi Autoscaling và Cold Start
 
@@ -106,3 +98,12 @@
 - Thời gian handler không đại diện cho toàn bộ thời gian Cold Start.
 - Chưa có đủ dữ liệu Burst Test để xác định thời gian scale-out.
 - Không thay đổi cấu hình hoặc triển khai lại dịch vụ trong quá trình kiểm tra.
+
+## 2026-11-17 — Tổng hợp tiến độ PaaS/FaaS
+
+- Đã hoàn thành triển khai PaaS và FaaS trên Google Cloud.
+- Đã kiểm tra các endpoint API, cấu hình tài nguyên và ghi nhận thời gian triển khai.
+- Đã kiểm tra Cloud Logging, Cloud Monitoring và ghi nhận thông tin Cold Start.
+- Đã có bản nháp báo cáo các mục 4.3, 4.4 và 6.1–6.3.
+- Đang tổng hợp minh chứng và rà soát các nội dung báo cáo để bàn giao cho nhóm.
+- Các phép đo bổ sung về thời gian phát hành toàn trình, scale-out và chi phí thực tế sẽ được hoàn thiện sau.
