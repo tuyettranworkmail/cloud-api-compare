@@ -126,8 +126,16 @@ def generator_preflight(c: dict) -> dict:
     load = c["experiments"]["load_generator"]
     cpu, memory = psutil.cpu_percent(interval=1), psutil.virtual_memory().percent
     result = {"cpu_percent": cpu, "memory_percent": memory, "logical_cpu_count": psutil.cpu_count(), "total_memory_gib": psutil.virtual_memory().total / 2**30, "python": sys.version, "platform": platform.platform(), "configured_region": load["region"]}
-    if load["region"] != c["targets"]["region"] or not load["independent_vm"]:
+    import os
+    pilot = (os.environ.get("BENCH_PILOT_LAPTOP") == "1"
+             and str(c["experiments"].get("experiment_id", "")).startswith("pilot"))
+    if load["region"] != c["targets"]["region"]:
         raise ConfigError("Máy tạo tải cần VM riêng trong cùng region")
+    if not load["independent_vm"]:
+        if not pilot:
+            raise ConfigError("Máy tạo tải cần VM riêng trong cùng region")
+        result["load_generator_kind"] = "laptop_pilot"
+        result["comparable"] = False
     if cpu > load["maximum_cpu_percent"] or memory > load["maximum_memory_percent"]:
         raise ConfigError("Máy tạo tải đang quá bận")
     if load["require_metadata_server"]:

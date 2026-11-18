@@ -6,7 +6,7 @@ from urllib.parse import urlsplit
 import httpx
 import jsonschema
 
-from benchmark.config import request_headers, target_config
+from benchmark.config import auth_source, request_headers, target_config
 from benchmark.io import fingerprint, utcnow
 
 
@@ -107,11 +107,7 @@ def validate_contracts(
             model_report = {
                 "checks": [],
                 "timeout_seconds": c["targets"]["timeout_seconds"],
-                "auth": (
-                    "bearer_env"
-                    if "Authorization" in request_headers(c, model)
-                    else "none"
-                ),
+                "auth": auth_source(c, model),
             }
             report["models"][model] = model_report
 

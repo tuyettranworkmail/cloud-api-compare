@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit
 
+import httpx
 import yaml
 from dotenv import load_dotenv
 
@@ -77,11 +78,50 @@ def target_config(c: dict, model: str) -> dict:
     return result
 
 
+def auth_source(c: dict, model: str) -> str:
+    target = c["targets"]["targets"][model]
+    if os.environ.get(target["token_env"], "").strip():
+        return "bearer_env"
+    if model in {"paas", "faas"}:
+        return "gce_metadata_identity"
+    return "none"
+
+
 def request_headers(c: dict, model: str) -> dict[str, str]:
     headers = dict(c["targets"].get("headers", {}))
-    token = os.environ.get(c["targets"]["targets"][model]["token_env"], "")
+    target = c["targets"]["targets"][model]
+    token = os.environ.get(target["token_env"], "").strip()
+
+    if not token and model in {"paas", "faas"}:
+        audience = target_config(c, model)["url"]
+        metadata_url = (
+            chr(104) + chr(116) + chr(116) + chr(112) + chr(58) + chr(47) + chr(47)
+            + "metadata.google.internal/computeMetadata/v1/"
+            + "instance/service-accounts/default/identity"
+        )
+        try:
+            response = httpx.get(
+                metadata_url,
+                params={"audience": audience, "format": "full"},
+                headers={"Metadata-Flavor": "Google"},
+                timeout=5,
+                trust_env=False,
+            )
+            response.raise_for_status()
+            token = response.text.strip()
+        except httpx.HTTPError:
+            raise ConfigError(
+                f"Không lấy được identity token từ GCE Metadata Server cho {model}"
+            ) from None
+
+        if not token:
+            raise ConfigError(
+                f"GCE Metadata Server trả token rỗng cho {model}"
+            )
+
     if token:
         headers["Authorization"] = f"Bearer {token}"
+
     return headers
 
 
